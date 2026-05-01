@@ -55,10 +55,9 @@ def parse_frontmatter(text: str):
 
 def render_affiliates(body: str, affiliates: dict) -> str:
     """Replace {AMAZON_AFF_US} etc. tokens in body with affiliate IDs.
-    Tokens missing → leave bare URL."""
+    Tokens missing → leave blank (bare URL is still a working link)."""
     def replace_token(match):
-        token = match.group(0)
-        # Walk affiliate dict to find a matching value
+        token = match.group(0).strip("{}")
         flat = []
         def flatten(d, prefix=""):
             for k, v in d.items():
@@ -68,10 +67,27 @@ def render_affiliates(body: str, affiliates: dict) -> str:
                     flat.append((k, v))
         flatten(affiliates)
         for k, v in flat:
-            if v and token.strip("{}") == k.upper():
+            if v and token == k.upper():
                 return v
-        return ""  # blank → no tracking, just bare URL
+        return ""
     return re.sub(r"\{[A-Z_]+\}", replace_token, body)
+
+
+def pick_related(current_meta, all_meta, max_n=4):
+    """Find pages with same persona OR same category, excluding self."""
+    out = []
+    for m in all_meta:
+        if m["slug"] == current_meta["slug"]:
+            continue
+        score = 0
+        if m.get("persona") == current_meta.get("persona"):
+            score += 2
+        if m.get("category") == current_meta.get("category"):
+            score += 1
+        if score > 0:
+            out.append((score, m))
+    out.sort(key=lambda x: -x[0])
+    return [m for _, m in out[:max_n]]
 
 
 def build():
@@ -79,58 +95,72 @@ def build():
     tools, affiliates = load_data()
     env = Environment(loader=FileSystemLoader(TEMPLATES), autoescape=select_autoescape(["html"]))
 
-    pages_index = []
+    # Pass 1: parse all pages, collect metadata
+    all_pages = []
     for md_file in sorted(CONTENT.glob("*.md")):
         with open(md_file) as f:
             raw = f.read()
         fm, body_md = parse_frontmatter(raw)
         slug = fm.get("slug") or md_file.stem
-        title = fm.get("title", slug.replace("-", " ").title())
-        description = fm.get("description", "")
-        persona = fm.get("persona", "")
-        persona_label = fm.get("persona_label", persona)
-        updated = fm.get("updated", dt.date.today().isoformat())
         body_md = render_affiliates(body_md, affiliates)
-        body_html = markdown.markdown(body_md, extensions=["tables", "fenced_code", "toc"])
+        all_pages.append({
+            "slug": slug,
+            "title": fm.get("title", slug.replace("-", " ").title()),
+            "description": fm.get("description", ""),
+            "persona": fm.get("persona", ""),
+            "persona_label": fm.get("persona_label", fm.get("persona", "")),
+            "category": fm.get("category", ""),
+            "pattern": fm.get("pattern", "best"),
+            "updated": fm.get("updated", dt.date.today().isoformat()),
+            "body_md": body_md,
+            "url": f"{slug}/",
+        })
 
-        canonical = f"{SITE_BASE}/{slug}/"
-        word_count = len(re.findall(r"\w+", body_md))
+    # Pass 2: render each
+    for p in all_pages:
+        related = pick_related(p, all_pages)
+        body_html = markdown.markdown(p["body_md"], extensions=["tables", "fenced_code", "toc"])
+        canonical = f"{SITE_BASE}/{p['slug']}/"
+        word_count = len(re.findall(r"\w+", p["body_md"]))
 
         tpl = env.get_template("base.html.j2")
         html = tpl.render(
-            title=title, description=description, canonical=canonical,
-            updated=updated, persona_label=persona_label,
+            title=p["title"], description=p["description"], canonical=canonical,
+            updated=p["updated"], persona_label=p["persona_label"], persona=p["persona"],
             word_count=word_count, body=body_html, gh_user=GH_USER,
+            site_base=SITE_BASE, related=related,
         )
-
-        out_dir = OUT / slug
+        out_dir = OUT / p["slug"]
         out_dir.mkdir(parents=True, exist_ok=True)
         (out_dir / "index.html").write_text(html, encoding="utf-8")
 
-        pages_index.append({
-            "slug": slug, "title": title, "url": f"{slug}/",
-            "persona": persona, "persona_label": persona_label,
-            "updated": updated,
-        })
-
-    # Group pages by persona for index
+    # Index — group by persona
     personas_map = {}
-    for p in pages_index:
-        personas_map.setdefault(p["persona"] or "general", {
+    for p in all_pages:
+        key = p["persona"] or "general"
+        personas_map.setdefault(key, {
+            "id": key,
             "label": p["persona_label"] or "General",
             "pages": [],
         })["pages"].append(p)
-    personas_list = [{"label": v["label"], "pages": v["pages"]}
-                     for k, v in sorted(personas_map.items())]
+    # Sort personas by name; comparisons & free-alts last
+    def persona_sort(item):
+        k = item[0]
+        if k in ("comparison", "free-alternatives"): return (1, k)
+        return (0, k)
+    personas_list = [v for _, v in sorted(personas_map.items(), key=persona_sort)]
+    for v in personas_list:
+        v["pages"].sort(key=lambda x: x["title"])
 
     idx_tpl = env.get_template("index.html.j2")
     (OUT / "index.html").write_text(idx_tpl.render(
         personas=personas_list, canonical=SITE_BASE + "/",
+        total_pages=len(all_pages),
         updated=dt.date.today().isoformat(),
     ), encoding="utf-8")
 
     # sitemap.xml
-    urls = [SITE_BASE + "/"] + [f"{SITE_BASE}/{p['slug']}/" for p in pages_index]
+    urls = [SITE_BASE + "/"] + [f"{SITE_BASE}/{p['slug']}/" for p in all_pages]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in urls:
@@ -143,7 +173,7 @@ def build():
         f"User-agent: *\nAllow: /\nSitemap: {SITE_BASE}/sitemap.xml\n",
         encoding="utf-8")
 
-    print(f"[build] {len(pages_index)} pages → {OUT}")
+    print(f"[build] {len(all_pages)} pages → {OUT}")
 
 
 if __name__ == "__main__":
