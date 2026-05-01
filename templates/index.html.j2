@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indie Creator Toolkit — Software Comparisons for Solo Creators</title>
+<meta name="description" content="Honest, free-first software comparisons for podcasters, indie game devs, screenwriters, illustrators, and newsletter writers.">
+<link rel="canonical" href="{{ canonical }}">
+<style>
+  body { font-family: ui-sans-serif, system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+  h1 { font-size: 2.2rem; }
+  .grid { display: grid; gap: 0.5rem; }
+  .grid a { padding: 0.5rem 0; border-bottom: 1px solid #eee; text-decoration: none; color: #0a66c2; }
+  .persona-section { margin: 1.5rem 0; }
+  footer { margin-top: 3rem; color: #888; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<h1>Indie Creator Toolkit</h1>
+<p>Honest software comparisons for solo creators. Free options first, paid only when worth it.</p>
+
+{% for persona in personas %}
+<section class="persona-section">
+<h2>For {{ persona.label }}</h2>
+<div class="grid">
+  {% for page in persona.pages %}<a href="{{ page.url }}">{{ page.title }}</a>{% endfor %}
+</div>
+</section>
+{% endfor %}
+
+<footer>Updated automatically · {{ updated }}</footer>
+</body>
+</html>

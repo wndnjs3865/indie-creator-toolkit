@@ -1,0 +1,151 @@
+{
+  "tools": [
+    {
+      "id": "notion",
+      "name": "Notion",
+      "categories": ["project-mgmt", "writing", "collaboration"],
+      "personas": ["screenwriters", "newsletter-writers", "indie-game-devs", "podcasters"],
+      "free_tier": "Personal use, unlimited blocks (recently restored)",
+      "starting_price_usd": 0,
+      "paid_price_usd": 10,
+      "affiliate_program": "partnerstack",
+      "affiliate_id_placeholder": "{NOTION_AFF}",
+      "homepage": "https://notion.so",
+      "best_for": ["solo creators wanting all-in-one workspace"]
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "categories": ["writing", "research"],
+      "personas": ["screenwriters", "newsletter-writers"],
+      "free_tier": "Free for personal use, fully featured",
+      "starting_price_usd": 0,
+      "paid_price_usd": 0,
+      "affiliate_program": null,
+      "homepage": "https://obsidian.md",
+      "best_for": ["local-first markdown workflow", "long-form research"]
+    },
+    {
+      "id": "substack",
+      "name": "Substack",
+      "categories": ["newsletter", "monetization"],
+      "personas": ["newsletter-writers"],
+      "free_tier": "Free to publish; 10% take on paid subs",
+      "starting_price_usd": 0,
+      "paid_price_usd": 0,
+      "affiliate_program": null,
+      "homepage": "https://substack.com",
+      "best_for": ["zero-setup paid newsletter"]
+    },
+    {
+      "id": "convertkit",
+      "name": "Kit (formerly ConvertKit)",
+      "categories": ["newsletter", "email-marketing"],
+      "personas": ["newsletter-writers", "podcasters"],
+      "free_tier": "Up to 10,000 subscribers free",
+      "starting_price_usd": 0,
+      "paid_price_usd": 25,
+      "affiliate_program": "direct",
+      "affiliate_id_placeholder": "{KIT_AFF}",
+      "homepage": "https://kit.com",
+      "best_for": ["serious newsletter operators with own list"]
+    },
+    {
+      "id": "buzzsprout",
+      "name": "Buzzsprout",
+      "categories": ["podcast-hosting"],
+      "personas": ["podcasters"],
+      "free_tier": "Free tier: 2hr/month, 90-day episode retention",
+      "starting_price_usd": 0,
+      "paid_price_usd": 12,
+      "affiliate_program": "direct",
+      "affiliate_id_placeholder": "{BUZZ_AFF}",
+      "homepage": "https://buzzsprout.com",
+      "best_for": ["solo podcasters wanting friendly UI"]
+    },
+    {
+      "id": "anchor",
+      "name": "Spotify for Podcasters (Anchor)",
+      "categories": ["podcast-hosting", "distribution"],
+      "personas": ["podcasters"],
+      "free_tier": "Fully free, unlimited",
+      "starting_price_usd": 0,
+      "paid_price_usd": 0,
+      "affiliate_program": null,
+      "homepage": "https://podcasters.spotify.com",
+      "best_for": ["zero-budget podcasters okay with Spotify lock-in"]
+    },
+    {
+      "id": "audacity",
+      "name": "Audacity",
+      "categories": ["podcast-editing", "audio-editing"],
+      "personas": ["podcasters", "audiobook-narrators"],
+      "free_tier": "100% free, open source",
+      "starting_price_usd": 0,
+      "paid_price_usd": 0,
+      "affiliate_program": null,
+      "homepage": "https://www.audacityteam.org",
+      "best_for": ["zero-budget audio editing"]
+    },
+    {
+      "id": "auphonic",
+      "name": "Auphonic",
+      "categories": ["podcast-editing", "audio-mastering"],
+      "personas": ["podcasters"],
+      "free_tier": "2 hours/month free auto-mastering",
+      "starting_price_usd": 0,
+      "paid_price_usd": 13,
+      "affiliate_program": null,
+      "homepage": "https://auphonic.com",
+      "best_for": ["one-click podcast mastering"]
+    },
+    {
+      "id": "godot",
+      "name": "Godot Engine",
+      "categories": ["game-engine"],
+      "personas": ["indie-game-devs"],
+      "free_tier": "Fully free, MIT license",
+      "starting_price_usd": 0,
+      "paid_price_usd": 0,
+      "affiliate_program": null,
+      "homepage": "https://godotengine.org",
+      "best_for": ["indie 2D/3D games, no royalty"]
+    },
+    {
+      "id": "unity",
+      "name": "Unity",
+      "categories": ["game-engine"],
+      "personas": ["indie-game-devs"],
+      "free_tier": "Personal: free up to $200k/yr revenue",
+      "starting_price_usd": 0,
+      "paid_price_usd": 25,
+      "affiliate_program": null,
+      "homepage": "https://unity.com",
+      "best_for": ["3D commercial games"]
+    },
+    {
+      "id": "krita",
+      "name": "Krita",
+      "categories": ["digital-painting", "illustration"],
+      "personas": ["illustrators"],
+      "free_tier": "Fully free, open source",
+      "starting_price_usd": 0,
+      "paid_price_usd": 0,
+      "affiliate_program": null,
+      "homepage": "https://krita.org",
+      "best_for": ["digital painting on any budget"]
+    },
+    {
+      "id": "procreate",
+      "name": "Procreate",
+      "categories": ["digital-painting", "illustration"],
+      "personas": ["illustrators"],
+      "free_tier": "iPad app, $13 one-time",
+      "starting_price_usd": 13,
+      "paid_price_usd": 13,
+      "affiliate_program": null,
+      "homepage": "https://procreate.com",
+      "best_for": ["iPad-first illustrators"]
+    }
+  ]
+}

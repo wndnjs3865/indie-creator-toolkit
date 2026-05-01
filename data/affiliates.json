@@ -1,0 +1,19 @@
+{
+  "_comment": "Replace placeholders after signing up. NEVER commit actual IDs to public repo — use GitHub Secrets + build-time substitution.",
+  "amazon_associates_us": "{AMAZON_AFF_US}",
+  "amazon_associates_kr": "{AMAZON_AFF_KR}",
+  "partnerstack": {
+    "notion": "{NOTION_AFF}",
+    "clickup": "{CLICKUP_AFF}",
+    "webflow": "{WEBFLOW_AFF}"
+  },
+  "impact": {
+    "adobe": "{ADOBE_AFF}"
+  },
+  "direct": {
+    "kit": "{KIT_AFF}",
+    "buzzsprout": "{BUZZ_AFF}",
+    "substack": null,
+    "convertkit": "{KIT_AFF}"
+  }
+}

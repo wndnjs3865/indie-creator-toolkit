@@ -1,0 +1,28 @@
+{
+  "personas": [
+    {"id": "solo-podcasters", "label": "solo podcasters"},
+    {"id": "indie-game-devs", "label": "indie game developers"},
+    {"id": "screenwriters", "label": "screenwriters"},
+    {"id": "illustrators", "label": "illustrators"},
+    {"id": "newsletter-writers", "label": "newsletter writers"},
+    {"id": "audiobook-narrators", "label": "audiobook narrators"},
+    {"id": "indie-filmmakers", "label": "indie filmmakers"},
+    {"id": "music-producers", "label": "music producers"}
+  ],
+  "categories": [
+    {"id": "podcast-hosting", "label": "podcast hosting"},
+    {"id": "podcast-editing", "label": "podcast editing software"},
+    {"id": "newsletter", "label": "newsletter platforms"},
+    {"id": "writing", "label": "writing software"},
+    {"id": "game-engine", "label": "game engines"},
+    {"id": "digital-painting", "label": "digital painting software"},
+    {"id": "project-mgmt", "label": "project management tools"}
+  ],
+  "patterns": [
+    "best {category} for {persona}",
+    "free {category} for {persona}",
+    "{tool_a} vs {tool_b} for {persona}",
+    "free alternatives to {tool}",
+    "{category} under {price} per month for {persona}"
+  ]
+}
