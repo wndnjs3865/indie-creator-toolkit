@@ -4,11 +4,14 @@
 - GitHub Actions `daily-page.yml`: 매일 06:00 UTC 1페이지 자동 생성·머지·배포
 - GitHub Actions `weekly-refresh.yml`: 매주 일 03:00 UTC 전체 데이터 갱신
 
+## 사이트 URL (라이브)
+**https://wndnjs3865.github.io/indie-creator-toolkit/**
+
 ## 다음 내가 할 액션
-1. repo 생성 후 Settings → Pages → Source: "GitHub Actions" 활성화
-2. Search Console에 사이트 등록 + sitemap 제출 (Pages 도메인 확정 후)
-3. Amazon Associates 가입 (글로벌 + 한국 둘 다)
-4. PartnerStack / Impact 가입 + 시드 affiliate 5개 등록 → `data/affiliates.json` 채우기
+1. ~~repo + Pages 활성화~~ ✅ 완료 (gh API로 자동 활성화됨)
+2. **Google Search Console 등록 + sitemap 제출**: https://search.google.com/search-console → URL prefix → `https://wndnjs3865.github.io/indie-creator-toolkit/` → HTML 메타 태그 검증 → sitemap URL `sitemap.xml` 제출
+3. **Amazon Associates 가입** (글로벌 + 한국 둘 다)
+4. **PartnerStack / Impact** 가입 + 시드 affiliate 5개 등록 → `data/affiliates.json` 치환 → push
 
 ## 아키텍처
 ```

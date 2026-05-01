@@ -108,7 +108,7 @@ def build():
         (out_dir / "index.html").write_text(html, encoding="utf-8")
 
         pages_index.append({
-            "slug": slug, "title": title, "url": f"/{slug}/",
+            "slug": slug, "title": title, "url": f"{slug}/",
             "persona": persona, "persona_label": persona_label,
             "updated": updated,
         })
