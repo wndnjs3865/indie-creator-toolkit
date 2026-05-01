@@ -16,3 +16,8 @@
 ## SD-004 — 페이지당 affiliate 최대 5개
 - **결정**: 한 페이지에 5개 이상 link 박지 않는다 (Google "low effort affiliate" 페널티 회피).
 - **사유**: 외부 SEO 분석 — 5개 이상 페이지는 "AI slop" 신호로 간주됨.
+
+## SD-005 — 모든 내부 링크는 상대경로 (절대경로 금지)
+- **결정**: `pages_index.url = f"{slug}/"`(슬래시 없이), nav back-link은 `href="../"`.
+- **사유**: GitHub Pages **project site**에서는 절대경로 `/foo/`가 `<user>.github.io/foo/`(사용자 root)로 라우팅됨. 프로젝트 페이지(`<user>.github.io/<repo>/foo/`)에 가려면 상대경로가 필요. 절대경로는 향후 커스텀 도메인 붙일 때 전환 가능.
+- **재검토**: 커스텀 도메인 도입 시 `SITE_BASE`를 절대 prefix로 fix.
