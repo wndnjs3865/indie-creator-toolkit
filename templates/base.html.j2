@@ -38,39 +38,115 @@
   ]
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.65; color: #222; }
-  h1, h2, h3 { line-height: 1.25; }
-  h1 { font-size: 2rem; margin-bottom: 0.4rem; }
-  h2 { margin-top: 2rem; }
-  h3 { margin-top: 1.4rem; }
-  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.95rem; }
-  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
-  th { background: #f6f6f6; }
-  a { color: #0a66c2; }
-  a:hover { text-decoration: none; }
-  .meta { color: #666; font-size: 0.9rem; margin: 0 0 1.5rem; }
-  .breadcrumb { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
-  .breadcrumb a { color: #0a66c2; text-decoration: none; }
-  .disclosure { font-size: 0.85rem; color: #666; border: 1px solid #eee; padding: 0.6rem 0.8rem; border-radius: 6px; margin: 1.5rem 0; }
-  blockquote { margin-left: 0; padding-left: 1rem; border-left: 3px solid #0a66c2; color: #555; }
-  ul, ol { padding-left: 1.4rem; }
-  li { margin: 0.25rem 0; }
-  .related { margin: 2rem 0; padding: 1rem; background: #f9fafb; border-radius: 8px; }
-  .related h3 { margin-top: 0; }
-  .related ul { margin: 0; }
-  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee; color: #888; font-size: 0.85rem; }
+  :root{
+    --primary:#1e40af;--primary-dark:#1e3a8a;--primary-light:#dbeafe;
+    --accent:#fb923c;--bg:#fafafa;--surface:#fff;--text:#0f172a;
+    --muted:#64748b;--border:#e2e8f0;--border-strong:#cbd5e1;
+    --code-bg:#f1f5f9;
+    --radius:8px;--radius-lg:14px;
+  }
+  *{box-sizing:border-box}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:var(--primary);text-decoration:none;text-underline-offset:3px}
+  a:hover{text-decoration:underline}
+
+  /* Nav */
+  .nav{padding:18px 0;background:rgba(255,255,255,.85);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+  .nav-inner{max-width:780px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-weight:700;letter-spacing:-0.01em;font-size:16px;color:var(--text)}
+  .brand .dot{color:var(--accent)}
+  .nav-link{font-size:14px;color:var(--muted);font-weight:500}
+
+  /* Breadcrumb */
+  .crumb{max-width:780px;margin:0 auto;padding:18px 24px 0;font-size:13px;color:var(--muted)}
+  .crumb a{color:var(--muted);text-decoration:none}
+  .crumb a:hover{color:var(--primary)}
+  .crumb span{color:var(--text)}
+
+  /* Article */
+  article{max-width:780px;margin:0 auto;padding:24px 24px 48px}
+  article h1{font-size:clamp(28px,4vw,40px);line-height:1.2;letter-spacing:-0.025em;font-weight:800;margin:8px 0 12px}
+  .meta{color:var(--muted);font-size:13px;display:flex;gap:14px;flex-wrap:wrap;margin:0 0 24px;font-weight:500}
+  .meta span{display:inline-flex;align-items:center;gap:6px}
+
+  .disclosure{background:#fffbeb;border:1px solid #fde68a;color:#78350f;padding:10px 14px;border-radius:var(--radius);font-size:13px;line-height:1.55;margin:0 0 32px}
+
+  article h2{font-size:24px;letter-spacing:-0.015em;font-weight:700;margin:36px 0 12px;line-height:1.25}
+  article h3{font-size:19px;letter-spacing:-0.01em;font-weight:700;margin:28px 0 10px;line-height:1.3}
+  article p{margin:0 0 16px;font-size:17px;line-height:1.7;color:var(--text)}
+  article ul,article ol{padding-left:1.4rem;margin:0 0 16px}
+  article li{margin:6px 0;font-size:17px;line-height:1.7}
+  article strong{font-weight:600;color:var(--text)}
+
+  article blockquote{margin:20px 0;padding:8px 18px;border-left:3px solid var(--primary);background:var(--primary-light);border-radius:0 var(--radius) var(--radius) 0;color:var(--text)}
+  article blockquote p{margin:0;font-size:16px;font-style:italic}
+  article code{background:var(--code-bg);padding:2px 6px;border-radius:4px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.92em}
+
+  /* Tables */
+  .tablewrap{overflow-x:auto;margin:18px 0;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);box-shadow:0 1px 2px rgba(15,23,42,.04)}
+  article table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+  article th,article td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--border)}
+  article th{background:#f8fafc;font-weight:600;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  article tr:last-child td{border-bottom:0}
+  article td a{font-weight:500}
+
+  /* Related */
+  .related{margin:40px 0 0;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg)}
+  .related h3{margin:0 0 14px;font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+  .related ul{list-style:none;padding:0;margin:0}
+  .related li{padding:6px 0;font-size:15px}
+  .related li::before{content:'→';color:var(--muted);margin-right:10px}
+  .related a{font-weight:500}
+
+  /* Article footer/CTA */
+  .article-cta{margin:36px 0 0;padding:24px;background:linear-gradient(135deg,#eef2ff,#dbeafe);border-radius:var(--radius-lg);text-align:center}
+  .article-cta h3{margin:0 0 6px;font-size:18px}
+  .article-cta p{margin:0 0 14px;color:var(--muted);font-size:14px}
+  .article-cta a{display:inline-block;padding:10px 20px;background:var(--primary);color:white;border-radius:var(--radius);font-weight:600;font-size:14px}
+  .article-cta a:hover{background:var(--primary-dark);text-decoration:none}
+
+  /* Page footer */
+  footer{padding:32px 0 60px;border-top:1px solid var(--border);background:var(--surface);font-size:13px;color:var(--muted);margin-top:48px}
+  .foot-row{max-width:780px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  footer a{color:var(--muted)}
+
+  /* Mobile tweaks */
+  @media (max-width:560px){
+    article p, article li{font-size:16px}
+    .nav-inner{padding:0 18px}
+    article{padding:18px 18px 36px}
+  }
 </style>
 </head>
 <body>
-<nav class="breadcrumb">
-  <a href="../">Indie Creator Toolkit</a> / {{ persona_label }} / <span>{{ title }}</span>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../" class="brand">Indie<span class="dot">•</span>Creator Toolkit</a>
+    <a href="../" class="nav-link">All comparisons →</a>
+  </div>
 </nav>
+
+<div class="crumb">
+  <a href="../">Home</a> / <a href="../#{{ persona }}">{{ persona_label }}</a> / <span>{{ title }}</span>
+</div>
+
 <article>
   <h1>{{ title }}</h1>
-  <p class="meta">Updated {{ updated }} · {{ word_count }} words · {{ persona_label }}</p>
-  <div class="disclosure">⚠ Some links are affiliate links — at no extra cost to you, we earn a small commission if you sign up. We only recommend tools we'd use ourselves.</div>
-  {{ body | safe }}
+  <div class="meta">
+    <span>📅 Updated {{ updated }}</span>
+    <span>📖 {{ word_count }} words</span>
+    <span>🎯 {{ persona_label }}</span>
+  </div>
+
+  <div class="disclosure">⚠️ Some links are affiliate links — at no extra cost to you, we earn a small commission if you sign up. We only recommend tools we'd use ourselves.</div>
+
+  <div class="article-body">{{ body | safe }}</div>
+
 {% if related %}
   <aside class="related">
     <h3>Related comparisons</h3>
@@ -79,9 +155,30 @@
     </ul>
   </aside>
 {% endif %}
+
+  <div class="article-cta">
+    <h3>More comparisons in your inbox?</h3>
+    <p>We add a new comparison page daily. Browse the full index.</p>
+    <a href="../">See all {{ word_count and 'comparisons' }} comparisons →</a>
+  </div>
 </article>
+
 <footer>
-  <p>Indie Creator Toolkit · Updated automatically from open data · <a href="https://github.com/{{ gh_user }}/indie-creator-toolkit">source</a></p>
+  <div class="foot-row">
+    <span>Indie Creator Toolkit · Updated {{ updated }}</span>
+    <span><a href="https://github.com/{{ gh_user }}/indie-creator-toolkit">source</a></span>
+  </div>
 </footer>
+
+<script>
+// Wrap loose tables in scrollable containers (Markdown emits raw <table>)
+document.querySelectorAll('article table').forEach(t => {
+  if (t.parentElement.classList.contains('tablewrap')) return;
+  const w = document.createElement('div');
+  w.className = 'tablewrap';
+  t.parentNode.insertBefore(w, t);
+  w.appendChild(t);
+});
+</script>
 </body>
 </html>

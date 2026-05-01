@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="7xp-F4qE1Qx27nW_sm01IA66wEu_VuXkXcEw4yOhg0Q">
 <title>Indie Creator Toolkit — Software Comparisons for Solo Creators</title>
-<meta name="description" content="Honest, free-first software comparisons for podcasters, indie game devs, screenwriters, illustrators, and newsletter writers.">
+<meta name="description" content="Honest, free-first software comparisons for podcasters, indie game devs, screenwriters, illustrators, and newsletter writers. Updated weekly.">
 <link rel="canonical" href="{{ canonical }}">
-<meta property="og:title" content="Indie Creator Toolkit">
+<meta property="og:title" content="Indie Creator Toolkit — Software Comparisons for Solo Creators">
 <meta property="og:description" content="Honest, free-first software comparisons for solo creators.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ canonical }}">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -20,32 +21,138 @@
   "description": "Honest, free-first software comparisons for solo creators."
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  body { font-family: ui-sans-serif, system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.65; }
-  h1 { font-size: 2.4rem; margin-bottom: 0.3rem; }
-  h2 { margin-top: 2rem; font-size: 1.4rem; }
-  .lede { color: #555; font-size: 1.05rem; margin-bottom: 2rem; }
-  .grid a { display: block; padding: 0.6rem 0.8rem; border-bottom: 1px solid #eee; text-decoration: none; color: #0a66c2; }
-  .grid a:hover { background: #f6f6f6; }
-  .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; background: #eef; font-size: 0.7rem; margin-left: 6px; color: #555; vertical-align: middle; }
-  .pill-vs { background: #fef3c7; }
-  .pill-free { background: #d1fae5; }
-  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee; color: #888; font-size: 0.85rem; }
+  :root{
+    --primary:#1e40af;--primary-dark:#1e3a8a;--primary-light:#dbeafe;
+    --accent:#fb923c;--bg:#fafafa;--surface:#fff;--text:#0f172a;
+    --muted:#64748b;--border:#e2e8f0;--border-strong:#cbd5e1;
+    --radius:8px;--radius-lg:14px;
+  }
+  *{box-sizing:border-box}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--primary);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+  /* Nav */
+  .nav{padding:18px 0;background:rgba(255,255,255,.85);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+  .nav-inner{display:flex;justify-content:space-between;align-items:center}
+  .brand{font-weight:700;letter-spacing:-0.01em;font-size:17px;color:var(--text)}
+  .brand .dot{color:var(--accent)}
+  .nav-actions{display:flex;gap:18px;font-size:14px;font-weight:500}
+  .nav-actions a{color:var(--muted)}
+
+  /* Hero */
+  .hero{padding:88px 0 56px;text-align:center}
+  .hero h1{font-size:clamp(34px,5.5vw,52px);line-height:1.1;letter-spacing:-0.025em;font-weight:800;margin:0 0 16px;max-width:780px;margin-left:auto;margin-right:auto}
+  .hero h1 .accent{color:var(--primary)}
+  .hero .lede{color:var(--muted);font-size:18px;max-width:600px;margin:0 auto 24px;line-height:1.55}
+  .hero .stats{display:inline-flex;align-items:center;gap:14px;font-size:13px;color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:7px 14px;border-radius:999px}
+  .hero .stats strong{color:var(--text)}
+  .hero .stats .dotsep{color:var(--border-strong)}
+
+  /* Persona sections */
+  .personas{padding:32px 0 48px}
+  .persona-block{margin:48px 0}
+  .persona-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+  .persona-head h2{font-size:24px;letter-spacing:-0.015em;font-weight:700;margin:0}
+  .persona-head .pcount{color:var(--muted);font-size:14px;font-weight:500}
+
+  .grid{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:560px){.grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:920px){.grid{grid-template-columns:1fr 1fr 1fr}}
+
+  .ctile{
+    display:flex;flex-direction:column;justify-content:space-between;
+    background:var(--surface);border:1px solid var(--border);
+    border-radius:var(--radius-lg);padding:18px 20px;
+    transition:border-color 140ms,transform 100ms,box-shadow 140ms;
+    min-height:118px;
+  }
+  .ctile:hover{border-color:var(--primary);box-shadow:0 8px 24px rgba(30,64,175,.08);text-decoration:none;transform:translateY(-1px)}
+  .ctile-title{font-size:15px;font-weight:600;color:var(--text);line-height:1.4;margin:0 0 14px}
+  .ctile-meta{display:flex;justify-content:space-between;align-items:center}
+  .pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase}
+  .pill-best{background:var(--primary-light);color:var(--primary)}
+  .pill-vs{background:#fef3c7;color:#92400e}
+  .pill-free{background:#dcfce7;color:#15803d}
+  .ctile-arrow{color:var(--muted);font-size:18px}
+
+  /* CTA */
+  .cta{margin:60px 0 0;padding:48px;background:linear-gradient(135deg,#eef2ff,#dbeafe);border-radius:var(--radius-lg);text-align:center}
+  .cta h3{font-size:22px;letter-spacing:-0.015em;margin:0 0 8px;font-weight:700}
+  .cta p{color:var(--muted);font-size:15px;margin:0 0 16px}
+  .cta a.btn{display:inline-block;padding:12px 24px;background:var(--primary);color:white;border-radius:var(--radius);font-weight:600;font-size:15px}
+  .cta a.btn:hover{background:var(--primary-dark);text-decoration:none}
+
+  footer{margin-top:48px;padding:32px 0 56px;border-top:1px solid var(--border);background:var(--surface);font-size:13px;color:var(--muted)}
+  .foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  footer a{color:var(--muted)}
 </style>
 </head>
 <body>
-<h1>Indie Creator Toolkit</h1>
-<p class="lede">Honest software comparisons for solo creators. Free options first, paid only when worth it. Updated automatically.</p>
 
+<nav class="nav">
+  <div class="container nav-inner">
+    <span class="brand">Indie<span class="dot">•</span>Creator Toolkit</span>
+    <div class="nav-actions">
+      <a href="#screenwriters">Screenwriters</a>
+      <a href="#solo-podcasters">Podcasters</a>
+      <a href="#indie-game-devs">Game devs</a>
+      <a href="#illustrators">Illustrators</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero container">
+  <h1>Tools for solo creators,<br><span class="accent">honestly compared.</span></h1>
+  <p class="lede">Free-first software comparisons for podcasters, indie game devs, screenwriters, illustrators, and newsletter writers. Updated automatically.</p>
+  <div class="stats">
+    <strong>{{ total_pages }}</strong> comparisons <span class="dotsep">·</span>
+    <strong>25+</strong> tools tracked <span class="dotsep">·</span>
+    Updated weekly
+  </div>
+</header>
+
+<main class="container personas">
 {% for persona in personas %}
-<section id="{{ persona.id }}">
-<h2>For {{ persona.label }} <span style="color:#999;font-size:0.7em;font-weight:400">({{ persona.pages | length }})</span></h2>
-<div class="grid">
-  {% for page in persona.pages %}<a href="{{ page.url }}">{{ page.title }}{% if page.pattern == "vs" %}<span class="pill pill-vs">vs</span>{% elif page.pattern == "free-alts" %}<span class="pill pill-free">free</span>{% else %}<span class="pill">best</span>{% endif %}</a>{% endfor %}
-</div>
+<section class="persona-block" id="{{ persona.id }}">
+  <div class="persona-head">
+    <h2>For {{ persona.label }}</h2>
+    <span class="pcount">{{ persona.pages | length }} comparison{{ '' if persona.pages|length == 1 else 's' }}</span>
+  </div>
+  <div class="grid">
+    {% for page in persona.pages %}
+    <a href="{{ page.url }}" class="ctile">
+      <span class="ctile-title">{{ page.title }}</span>
+      <span class="ctile-meta">
+        {% if page.pattern == "vs" %}<span class="pill pill-vs">vs</span>
+        {% elif page.pattern == "free-alts" %}<span class="pill pill-free">free</span>
+        {% else %}<span class="pill pill-best">best</span>{% endif %}
+        <span class="ctile-arrow">→</span>
+      </span>
+    </a>
+    {% endfor %}
+  </div>
 </section>
 {% endfor %}
 
-<footer>{{ total_pages }} pages · Updated {{ updated }} · <a href="sitemap.xml">sitemap</a></footer>
+<div class="cta">
+  <h3>New comparison every day.</h3>
+  <p>We add a new comparison page every morning. Bookmark and check back.</p>
+  <a href="sitemap.xml" class="btn">View sitemap</a>
+</div>
+</main>
+
+<footer>
+  <div class="container foot-row">
+    <span>{{ total_pages }} pages · Updated {{ updated }}</span>
+    <span><a href="sitemap.xml">sitemap</a> · <a href="https://github.com/wndnjs3865/indie-creator-toolkit">source</a></span>
+  </div>
+</footer>
+
 </body>
 </html>
