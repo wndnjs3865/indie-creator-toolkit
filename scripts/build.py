@@ -189,7 +189,7 @@ def build():
     # Pass 2: render each
     for p in all_pages:
         related = pick_related(p, all_pages)
-        body_html = markdown.markdown(p["body_md"], extensions=["tables", "fenced_code", "toc"])
+        body_html = markdown.markdown(p["body_md"], extensions=["tables", "fenced_code", "toc", "md_in_html", "attr_list"])
         body_html = rewrite_affiliate_links(body_html, affiliates)
         canonical = f"{SITE_BASE}/{p['slug']}/"
         word_count = len(re.findall(r"\w+", p["body_md"]))

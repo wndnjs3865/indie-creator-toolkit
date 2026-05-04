@@ -144,6 +144,59 @@
   footer a{color:var(--muted)}
   footer a:hover{color:var(--text)}
 
+  /* TOOL CARD — rich product showcase */
+  .tool-card{display:grid;grid-template-columns:60px 1fr auto;gap:16px;align-items:center;padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);margin:18px 0;transition:transform 200ms cubic-bezier(.4,0,.2,1),box-shadow 200ms,border-color 200ms}
+  .tool-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--primary-3)}
+  .tool-card .logo{width:60px;height:60px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:white;letter-spacing:-.03em;flex-shrink:0}
+  .tool-card .logo.b1{background:linear-gradient(135deg,#dc2626,#f97316)}
+  .tool-card .logo.b2{background:linear-gradient(135deg,#7c3aed,#a855f7)}
+  .tool-card .logo.b3{background:linear-gradient(135deg,#0891b2,#06b6d4)}
+  .tool-card .logo.b4{background:linear-gradient(135deg,#16a34a,#22c55e)}
+  .tool-card .logo.b5{background:linear-gradient(135deg,#1e40af,#3b82f6)}
+  .tool-card .logo.b6{background:linear-gradient(135deg,#0a0e1a,#475569)}
+  .tool-card .info{min-width:0}
+  .tool-card .info-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+  .tool-card .info h3{margin:0;font-size:17px;font-weight:700;letter-spacing:-.01em}
+  .tool-card .info p{margin:0 0 8px;font-size:13.5px;color:var(--text-3);line-height:1.5}
+  .tool-card .stats{display:flex;gap:14px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+  .tool-card .stats span{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+  .tool-card .cta{display:inline-flex;align-items:center;gap:6px;align-self:center;padding:10px 18px;background:var(--text);color:white !important;border-radius:var(--r-sm);font-size:13px;font-weight:600;white-space:nowrap;transition:background var(--t-fast),transform var(--t-fast)}
+  .tool-card .cta:hover{background:#1e2939;transform:translateY(-1px);text-decoration:none}
+  @media(max-width:600px){.tool-card{grid-template-columns:48px 1fr;padding:16px}.tool-card .logo{width:48px;height:48px;font-size:20px;border-radius:12px}.tool-card .cta{grid-column:1/-1;justify-content:center;margin-top:8px}}
+
+  /* BADGES */
+  .badge{display:inline-flex;align-items:center;padding:2px 8px;font-size:10.5px;font-weight:700;border-radius:999px;letter-spacing:.05em;text-transform:uppercase;line-height:1.4}
+  .badge-best{background:#fef3c7;color:#92400e}
+  .badge-popular{background:#dbeafe;color:#1e40af}
+  .badge-budget{background:#dcfce7;color:#166534}
+  .badge-pro{background:#f3e8ff;color:#7e22ce}
+  .badge-free{background:#e0e7ff;color:#3730a3}
+
+  /* PROS / CONS */
+  .pros-cons{display:grid;gap:14px;grid-template-columns:1fr;margin:18px 0}
+  @media(min-width:640px){.pros-cons{grid-template-columns:1fr 1fr}}
+  .pros,.cons{padding:18px 20px;border-radius:var(--r-md)}
+  .pros{background:#f0fdf4;border:1px solid #bbf7d0}
+  .cons{background:#fef2f2;border:1px solid #fecaca}
+  .pros h4,.cons h4{margin:0 0 10px;font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+  .pros h4{color:#166534}
+  .cons h4{color:#991b1b}
+  article .pros ul,article .cons ul{margin:0;padding-left:18px;font-size:14px;line-height:1.6}
+  article .pros li,article .cons li{margin-bottom:4px;font-size:14px}
+
+  /* QUICK PICK */
+  .quickpick{display:flex;gap:16px;align-items:center;padding:18px 22px;background:linear-gradient(135deg,#1e40af,#3b82f6);color:white;border-radius:var(--r-md);margin:24px 0;box-shadow:var(--shadow-sm)}
+  .quickpick-icon{font-size:28px;line-height:1;flex-shrink:0}
+  .quickpick-content h4{margin:0 0 4px;font-size:15px;color:white;font-weight:700}
+  .quickpick-content p{margin:0;font-size:14px;color:rgba(255,255,255,.88);line-height:1.5}
+  .quickpick-content a{color:white;text-decoration:underline;font-weight:600}
+  .quickpick-content a:hover{color:rgba(255,255,255,.85)}
+
+  /* CHECK ICON for tables (✓/✗ pretty) */
+  article td .yes{color:#16a34a;font-weight:700}
+  article td .no{color:#dc2626;font-weight:700}
+  article td .ok{color:#0891b2;font-weight:600;font-size:12px}
+
   /* Mobile */
   @media (max-width:600px){
     article p,article li{font-size:16px}

@@ -1,19 +1,19 @@
 {
-  "_comment": "Replace placeholders after signing up. NEVER commit actual IDs to public repo — use GitHub Secrets + build-time substitution.",
+  "_comment": "Placeholders use {ENV_VAR_NAME} format matching workflow secret names. Real values are injected at build time from GitHub Secrets via build.py override_from_env(). Never commit actual IDs.",
   "amazon_associates_us": "{AMAZON_AFF_US}",
   "amazon_associates_kr": "{AMAZON_AFF_KR}",
   "partnerstack": {
-    "notion": "{NOTION_AFF}",
-    "clickup": "{CLICKUP_AFF}",
-    "webflow": "{WEBFLOW_AFF}"
+    "notion": "{PARTNERSTACK_NOTION}",
+    "clickup": "{PARTNERSTACK_CLICKUP}",
+    "webflow": "{PARTNERSTACK_WEBFLOW}"
   },
   "impact": {
-    "adobe": "{ADOBE_AFF}"
+    "adobe": "{IMPACT_ADOBE}"
   },
   "direct": {
-    "kit": "{KIT_AFF}",
-    "buzzsprout": "{BUZZ_AFF}",
-    "substack": null,
-    "convertkit": "{KIT_AFF}"
+    "kit": "{DIRECT_KIT}",
+    "buzz": "{DIRECT_BUZZ}",
+    "convertkit": "{DIRECT_CONVERTKIT}",
+    "substack": null
   }
 }
