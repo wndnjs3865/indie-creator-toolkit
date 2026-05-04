@@ -27,6 +27,17 @@ jobs:
         env:
           GH_USER: ${{ github.repository_owner }}
           SITE_BASE: https://${{ github.repository_owner }}.github.io/indie-creator-toolkit
+          # Affiliate IDs — set as repo secrets, empty = build uses bare URLs (still works).
+          AMAZON_AFF_US: ${{ secrets.AMAZON_AFF_US }}
+          AMAZON_AFF_KR: ${{ secrets.AMAZON_AFF_KR }}
+          PARTNERSTACK_NOTION: ${{ secrets.PARTNERSTACK_NOTION }}
+          PARTNERSTACK_CLICKUP: ${{ secrets.PARTNERSTACK_CLICKUP }}
+          PARTNERSTACK_WEBFLOW: ${{ secrets.PARTNERSTACK_WEBFLOW }}
+          IMPACT_ADOBE: ${{ secrets.IMPACT_ADOBE }}
+          DIRECT_KIT: ${{ secrets.DIRECT_KIT }}
+          DIRECT_BUZZ: ${{ secrets.DIRECT_BUZZ }}
+          DIRECT_SUBSTACK: ${{ secrets.DIRECT_SUBSTACK }}
+          DIRECT_CONVERTKIT: ${{ secrets.DIRECT_CONVERTKIT }}
         run: python scripts/build.py
       - uses: actions/configure-pages@v5
         with:

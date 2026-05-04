@@ -40,7 +40,30 @@ def load_data():
         tools = json.load(f)["tools"]
     with open(DATA / "affiliates.json") as f:
         affiliates = json.load(f)
+    # Override with env vars (GitHub Secrets in CI, .env locally) — keeps real IDs out of repo.
+    affiliates = override_from_env(affiliates)
     return tools, affiliates
+
+
+def override_from_env(affiliates: dict) -> dict:
+    """For each token like {AMAZON_AFF_US}, look up env var AMAZON_AFF_US.
+    If set, replace the placeholder with the real value.
+    Walks nested dicts so partnerstack.notion → PARTNERSTACK_NOTION etc."""
+    import os
+    def walk(d, prefix=""):
+        for k, v in list(d.items()):
+            if isinstance(v, dict):
+                walk(v, prefix + k.upper() + "_")
+            elif isinstance(v, str) and v.startswith("{") and v.endswith("}"):
+                env_key = v.strip("{}")
+                if os.environ.get(env_key):
+                    d[k] = os.environ[env_key]
+            elif v is None:
+                env_key = (prefix + k.upper())
+                if os.environ.get(env_key):
+                    d[k] = os.environ[env_key]
+    walk(affiliates)
+    return affiliates
 
 
 def parse_frontmatter(text: str):
