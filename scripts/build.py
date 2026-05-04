@@ -96,6 +96,53 @@ def render_affiliates(body: str, affiliates: dict) -> str:
     return re.sub(r"\{[A-Z_]+\}", replace_token, body)
 
 
+# Tool homepage → affiliate URL template. The {id} placeholder is filled from affiliates.json.
+# When affiliate ID is missing, link stays bare (still works, just no commission).
+AFFILIATE_LINK_MAP = {
+    "notion.so": ("https://www.notion.so/?via={id}", "partnerstack.notion"),
+    "notion.com": ("https://www.notion.com/?via={id}", "partnerstack.notion"),
+    "clickup.com": ("https://clickup.com/?fp_ref={id}", "partnerstack.clickup"),
+    "webflow.com": ("https://webflow.com/?via={id}", "partnerstack.webflow"),
+    "convertkit.com": ("https://convertkit.com?lmref={id}", "direct.convertkit"),
+    "kit.com": ("https://kit.com?lmref={id}", "direct.kit"),
+    "buzzsprout.com": ("https://www.buzzsprout.com/?referrer_id={id}", "direct.buzz"),
+    "amazon.com": ("https://www.amazon.com/dp/{asin}?tag={id}", "amazon_associates_us"),
+}
+
+def get_affiliate_id(affiliates: dict, dotted_key: str) -> str:
+    """Resolve 'partnerstack.notion' → affiliates['partnerstack']['notion']."""
+    parts = dotted_key.split(".")
+    cur = affiliates
+    for p in parts:
+        if not isinstance(cur, dict):
+            return ""
+        cur = cur.get(p)
+        if cur is None:
+            return ""
+    return cur if isinstance(cur, str) else ""
+
+def rewrite_affiliate_links(html: str, affiliates: dict) -> str:
+    """Post-render: rewrite tool homepage links to affiliate URLs.
+    Adds rel='sponsored noopener' for FTC compliance."""
+    def fix(match):
+        attrs = match.group(1)
+        href = match.group(2)
+        suffix = match.group(3)
+        # Find matching domain
+        for domain, (template, key) in AFFILIATE_LINK_MAP.items():
+            if domain in href:
+                aff_id = get_affiliate_id(affiliates, key)
+                if not aff_id or aff_id.startswith("{"):
+                    return match.group(0)  # leave bare if no ID
+                if "{id}" in template:
+                    new_href = template.replace("{id}", aff_id)
+                    # Preserve any existing path (e.g. notion.so/some-page → only swap base)
+                    # For simplicity we keep the homepage form for now.
+                    return f'<a{attrs}href="{new_href}" rel="sponsored noopener"{suffix}>'
+        return match.group(0)
+    return re.sub(r'<a([^>]*?)href="([^"]+)"([^>]*?)>', fix, html)
+
+
 def pick_related(current_meta, all_meta, max_n=4):
     """Find pages with same persona OR same category, excluding self."""
     out = []
@@ -143,6 +190,7 @@ def build():
     for p in all_pages:
         related = pick_related(p, all_pages)
         body_html = markdown.markdown(p["body_md"], extensions=["tables", "fenced_code", "toc"])
+        body_html = rewrite_affiliate_links(body_html, affiliates)
         canonical = f"{SITE_BASE}/{p['slug']}/"
         word_count = len(re.findall(r"\w+", p["body_md"]))
 
