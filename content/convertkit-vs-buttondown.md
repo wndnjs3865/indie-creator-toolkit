@@ -24,7 +24,7 @@ You're picking between [Kit (formerly ConvertKit)](https://kit.com) and [Buttond
 | | Kit (ConvertKit) | Buttondown |
 |---|---|---|
 | Free tier | <span class="yes">✓</span> Up to 10,000 subs | <span class="yes">✓</span> Up to 100 subs |
-| Starting paid | $25/mo | <span class="yes">$9/mo</span> |
+| Starting paid | $33/mo | <span class="yes">$9/mo</span> |
 | Composer | Rich-text + visual | <span class="yes">✓</span> Markdown-first |
 | Automation / sequences | <span class="yes">✓</span> Best-in-class | Basic |
 | API + webhooks | Strong | <span class="yes">✓</span> Strong |
@@ -39,7 +39,7 @@ You're picking between [Kit (formerly ConvertKit)](https://kit.com) and [Buttond
     <div class="info-top"><h3>Kit (formerly ConvertKit)</h3><span class="badge badge-pro">Pro · List owner</span></div>
     <p>The right pick if you treat your newsletter as a long-term business asset. The 10,000-subscriber free tier is the most generous in the category, automation is best-in-class, and you own the list — export and leave any time.</p>
     <div class="stats">
-      <span>💰 Free up to 10k subs / $25/mo paid</span>
+      <span>💰 Free up to 10k subs / $33/mo paid</span>
       <span>⚙️ Automation best-in-class</span>
       <span>📤 Full export</span>
     </div>
@@ -111,7 +111,7 @@ You're picking between [Kit (formerly ConvertKit)](https://kit.com) and [Buttond
 
 ## The math
 
-At 1,000 subs, Kit is free; Buttondown is ~$9-19/mo. At 5,000 subs, Kit is free; Buttondown is ~$19-29/mo. At 10,000 subs, Kit *just* hits paid (~$29/mo); Buttondown is ~$50/mo.
+At 1,000 subs, Kit is free; Buttondown is ~$9-19/mo. At 5,000 subs, Kit is free; Buttondown is ~$19-29/mo. At 10,000 subs, Kit *just* hits paid (~$33/mo); Buttondown is ~$50/mo.
 
 Kit's free tier dominates pure economics until you cross ~10k subs. Past that, Buttondown is cheaper but you lose Kit's automation depth — which often pays for itself via better retention and upsells.
 

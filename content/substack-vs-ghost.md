@@ -24,7 +24,7 @@ You're picking between [Substack](https://substack.com) and [Ghost](https://ghos
 | | Substack | Ghost |
 |---|---|---|
 | Free tier | <span class="yes">✓</span> Free to publish | <span class="yes">✓</span> Self-hosted free |
-| Starting price | $0 | $0 self-host · $9/mo managed |
+| Starting price | $0 | $0 self-host · $18/mo managed |
 | Revenue share | <span class="no">10% on paid subs</span> | <span class="yes">0% (Stripe fee only)</span> |
 | Built-in audience | <span class="yes">✓</span> Recommendations + Notes | <span class="no">✗</span> Bring your own |
 | Custom domain | Free | Free |
@@ -74,9 +74,9 @@ You're picking between [Substack](https://substack.com) and [Ghost](https://ghos
   <div class="logo b5">G</div>
   <div class="info">
     <div class="info-top"><h3>Ghost</h3><span class="badge badge-free">Open source</span></div>
-    <p>The right answer if you want a newsletter <em>and</em> a blog on the same domain, with full control. Self-host for free, or use Ghost(Pro) managed hosting from $9/mo. The platform's revenue model is Pro hosting — there's no per-sub cut.</p>
+    <p>The right answer if you want a newsletter <em>and</em> a blog on the same domain, with full control. Self-host for free, or use Ghost(Pro) managed hosting from $18/mo. The platform's revenue model is Pro hosting — there's no per-sub cut.</p>
     <div class="stats">
-      <span>💰 $0 self-host · $9/mo managed</span>
+      <span>💰 $0 self-host · $18/mo managed</span>
       <span>🆓 Open source (MIT)</span>
       <span>💳 Native Stripe</span>
     </div>
@@ -111,7 +111,7 @@ You're picking between [Substack](https://substack.com) and [Ghost](https://ghos
 
 ## The math
 
-At 1,000 paid subs × $5/mo, Substack takes $500/mo of your revenue (forever). Ghost(Pro) at $9/mo costs you $9/mo flat. The crossover is somewhere around 200 paid subs × $5 — past that, Ghost is cheaper every month.
+At 1,000 paid subs × $5/mo, Substack takes $500/mo of your revenue (forever). Ghost(Pro) at $18/mo costs you $18/mo flat. The crossover is somewhere around 200 paid subs × $5 — past that, Ghost is cheaper every month.
 
 The trade-off: Substack delivers some of those subs *for you* via recommendations. Ghost makes you bring 100% of the audience yourself. So the right answer depends on whether you have a list to import or you need help building one.
 
@@ -130,4 +130,4 @@ If you're starting from zero, both have free tiers — try Substack for 30 days,
 
 ## Honest disclosure
 
-Links may be affiliate. The 10% number on Substack and the $9/mo on Ghost(Pro) are publicly listed pricing as of 2026. We only compare tools we'd use ourselves.
+Links may be affiliate. The 10% number on Substack and the $18/mo on Ghost(Pro) are publicly listed pricing as of 2026. We only compare tools we'd use ourselves.

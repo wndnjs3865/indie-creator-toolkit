@@ -24,10 +24,10 @@ You write alone. You ship alone. The last thing you want is a newsletter platfor
 | Platform | Free tier | Starting price | Best for | Open source |
 |---|---|---|---|---|
 | **[Substack](https://substack.com)** <span class="badge badge-best">Top pick</span> | <span class="yes">✓</span> Free; 10% take on paid subs | $0 | Zero-setup paid newsletter | <span class="no">✗</span> |
-| **[Kit (ConvertKit)](https://kit.com)** <span class="badge badge-pro">Pro</span> | <span class="yes">✓</span> Up to 10,000 subs | $25/mo | Serious operators owning their list | <span class="no">✗</span> |
-| **[beehiiv](https://beehiiv.com)** <span class="badge badge-popular">Growth</span> | <span class="yes">✓</span> Up to 2,500 subs | $39/mo | Referral-driven growth | <span class="no">✗</span> |
+| **[Kit (ConvertKit)](https://kit.com)** <span class="badge badge-pro">Pro</span> | <span class="yes">✓</span> Up to 10,000 subs | $33/mo | Serious operators owning their list | <span class="no">✗</span> |
+| **[beehiiv](https://beehiiv.com)** <span class="badge badge-popular">Growth</span> | <span class="yes">✓</span> Up to 2,500 subs | $43/mo | Referral-driven growth | <span class="no">✗</span> |
 | **[Buttondown](https://buttondown.com)** <span class="badge badge-budget">Budget</span> | <span class="yes">✓</span> Up to 100 subs | $9/mo | Markdown-first indie writers | <span class="no">✗</span> |
-| **[Ghost](https://ghost.org)** <span class="badge badge-free">Open source</span> | <span class="yes">✓</span> Self-host free | $9/mo managed | Full control over email + blog | <span class="yes">✓</span> |
+| **[Ghost](https://ghost.org)** <span class="badge badge-free">Open source</span> | <span class="yes">✓</span> Self-host free | $18/mo managed | Full control over email + blog | <span class="yes">✓</span> |
 
 ## The contenders, ranked
 
@@ -73,7 +73,7 @@ You write alone. You ship alone. The last thing you want is a newsletter platfor
     <div class="info-top"><h3>Kit (formerly ConvertKit)</h3><span class="badge badge-pro">Pro</span></div>
     <p>The right pick if you treat your newsletter as a long-term business asset. You own the list, automation is best-in-class, and the free tier (10k subs) is generous enough that most writers never pay until they're already earning.</p>
     <div class="stats">
-      <span>💰 From $25/mo (paid)</span>
+      <span>💰 From $33/mo (paid)</span>
       <span>🎁 Free up to 10k subs</span>
       <span>⚙️ Automation native</span>
     </div>
@@ -109,7 +109,7 @@ You write alone. You ship alone. The last thing you want is a newsletter platfor
     <div class="info-top"><h3>beehiiv</h3><span class="badge badge-popular">Growth-focused</span></div>
     <p>The pick if growth and ad revenue are part of your plan from day one. Native referral mechanics, an ad marketplace, and analytics that go deeper than Substack's. The free tier (2,500 subs) is generous for validation.</p>
     <div class="stats">
-      <span>💰 From $39/mo</span>
+      <span>💰 From $43/mo</span>
       <span>🎁 Free up to 2.5k subs</span>
       <span>🚀 Referral + ads native</span>
     </div>
@@ -179,9 +179,9 @@ You write alone. You ship alone. The last thing you want is a newsletter platfor
   <div class="logo b5">G</div>
   <div class="info">
     <div class="info-top"><h3>Ghost</h3><span class="badge badge-free">Open source</span></div>
-    <p>The pick if you want a newsletter *and* a blog on the same domain, with full control. Self-host for free, or use Ghost(Pro) managed hosting from $9/mo. The only open-source option in this list — your data, your rules.</p>
+    <p>The pick if you want a newsletter *and* a blog on the same domain, with full control. Self-host for free, or use Ghost(Pro) managed hosting from $18/mo. The only open-source option in this list — your data, your rules.</p>
     <div class="stats">
-      <span>💰 $0 self-host · $9/mo managed</span>
+      <span>💰 $0 self-host · $18/mo managed</span>
       <span>🆓 Open source (MIT)</span>
       <span>💳 Native Stripe payments</span>
     </div>

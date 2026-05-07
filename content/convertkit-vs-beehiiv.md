@@ -24,7 +24,7 @@ You're picking between [Kit (formerly ConvertKit)](https://kit.com) and [beehiiv
 | | Kit (ConvertKit) | beehiiv |
 |---|---|---|
 | Free tier | <span class="yes">✓</span> Up to 10,000 subs | <span class="yes">✓</span> Up to 2,500 subs |
-| Starting paid | $25/mo | $39/mo |
+| Starting paid | $33/mo | $43/mo |
 | Automation / sequences | <span class="yes">✓</span> Best-in-class | Solid |
 | Referral program | Manual / 3rd party | <span class="yes">✓</span> Native |
 | Ad marketplace | <span class="no">✗</span> | <span class="yes">✓</span> Native |
@@ -41,7 +41,7 @@ You're picking between [Kit (formerly ConvertKit)](https://kit.com) and [beehiiv
     <div class="info-top"><h3>Kit (formerly ConvertKit)</h3><span class="badge badge-best">List owner</span></div>
     <p>The right pick if you treat your newsletter as a long-term business asset. The 10,000-subscriber free tier is the most generous in the category, automation is best-in-class, and you own the list — export and leave any time.</p>
     <div class="stats">
-      <span>💰 Free up to 10k subs / $25/mo paid</span>
+      <span>💰 Free up to 10k subs / $33/mo paid</span>
       <span>⚙️ Automation best-in-class</span>
       <span>📤 Full export</span>
     </div>
@@ -79,7 +79,7 @@ You're picking between [Kit (formerly ConvertKit)](https://kit.com) and [beehiiv
     <div class="info-top"><h3>beehiiv</h3><span class="badge badge-popular">Growth-focused</span></div>
     <p>Built for newsletter writers who treat growth as a product. Native referral program (no plugins), an ad marketplace that buys inventory across the network, and analytics that go deeper than Kit's. Free tier (2,500 subs) is generous for validation.</p>
     <div class="stats">
-      <span>💰 From $39/mo</span>
+      <span>💰 From $43/mo</span>
       <span>🚀 Native referral + ads</span>
       <span>🎁 Free up to 2.5k subs</span>
     </div>
@@ -117,10 +117,10 @@ You're picking between [Kit (formerly ConvertKit)](https://kit.com) and [beehiiv
 ## The math
 
 At 1,000 subs: Kit is free; beehiiv is free.
-At 5,000 subs: Kit is free; beehiiv is paid ($39/mo).
+At 5,000 subs: Kit is free; beehiiv is paid ($43/mo).
 At 10,000 subs: Kit just hits paid (~$29-49/mo); beehiiv is paid (~$84/mo).
 
-Kit's free tier dominates pure economics until you cross ~10k subs. beehiiv's higher fees can be offset by the referral + ad revenue native to the platform — a $39/mo plan that earns $200/mo in ads is dramatically better than a free plan earning $0.
+Kit's free tier dominates pure economics until you cross ~10k subs. beehiiv's higher fees can be offset by the referral + ad revenue native to the platform — a $43/mo plan that earns $200/mo in ads is dramatically better than a free plan earning $0.
 
 ## Verdict
 

@@ -24,7 +24,7 @@ You're picking between [Trello](https://trello.com) and [Linear](https://linear.
 | | Trello | Linear |
 |---|---|---|
 | Free tier | <span class="yes">✓</span> Unlimited cards, 10 boards | <span class="yes">✓</span> 10 users / 250 issues |
-| Starting paid | $5/user/mo | $8/user/mo |
+| Starting paid | $5/user/mo | $10/user/mo |
 | Speed | Good | <span class="yes">✓</span> Best-in-class |
 | Keyboard shortcuts | OK | <span class="yes">✓</span> Comprehensive |
 | GitHub integration | Power-Up | <span class="yes">✓</span> Native |
@@ -79,7 +79,7 @@ You're picking between [Trello](https://trello.com) and [Linear](https://linear.
     <div class="info-top"><h3>Linear</h3><span class="badge badge-pro">Dev-grade</span></div>
     <p>The right pick for software teams. Keyboard-first UI means filing a bug takes two seconds. Cycles (sprints), native GitHub integration, and a roadmap layer ship in the box — no Power-Ups, no plugins.</p>
     <div class="stats">
-      <span>💰 Free / $8/user/mo</span>
+      <span>💰 Free / $10/user/mo</span>
       <span>⌨️ Keyboard-first</span>
       <span>🔗 Native GitHub PR linking</span>
     </div>
@@ -116,7 +116,7 @@ You're picking between [Trello](https://trello.com) and [Linear](https://linear.
 
 ## The math
 
-At small scale, both are effectively free. At paid tiers, Trello ($5/user/mo) is cheaper than Linear ($8/user/mo) — but for a software team, Linear's speed advantage on triage and the GitHub auto-close usually pays back the $3 difference in saved time within a week.
+At small scale, both are effectively free. At paid tiers, Trello ($5/user/mo) is cheaper than Linear ($10/user/mo) — but for a software team, Linear's speed advantage on triage and the GitHub auto-close usually pays back the $3 difference in saved time within a week.
 
 For non-engineering teams, the equation flips: you don't get Linear's speed advantage if your team isn't living in the keyboard, so Trello at $5 is the honest choice.
 

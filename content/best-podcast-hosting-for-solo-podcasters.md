@@ -23,7 +23,7 @@ You record alone. You edit alone. The last thing you want is to wrestle with a p
 
 | Host | Free tier | Starting price | Best for | Storage |
 |---|---|---|---|---|
-| **[Buzzsprout](https://buzzsprout.com)** <span class="badge badge-best">Top pick</span> | <span class="yes">✓</span> 2 hrs/mo, 90 days | $12/mo | Beginners + clean analytics | Unlimited paid |
+| **[Buzzsprout](https://buzzsprout.com)** <span class="badge badge-best">Top pick</span> | <span class="yes">✓</span> 2 hrs/mo, 90 days | $15/mo | Beginners + clean analytics | Unlimited paid |
 | **Spotify for Podcasters** <span class="badge badge-free">Free</span> | <span class="yes">✓</span> Unlimited | $0 | Spotify-first audiences | Unlimited |
 | **Transistor** <span class="badge badge-pro">Pro</span> | <span class="no">✗</span> | $19/mo | Multiple shows, networks | Unlimited |
 | **Podbean** | <span class="yes">✓</span> 5 hrs total | $9/mo | Live podcasting | Unlimited paid |
@@ -38,7 +38,7 @@ You record alone. You edit alone. The last thing you want is to wrestle with a p
     <div class="info-top"><h3>Buzzsprout</h3><span class="badge badge-best">Top pick</span></div>
     <p>The default recommendation for solo podcasters. Fair pricing tiers based on monthly upload hours, not features hidden behind upsells.</p>
     <div class="stats">
-      <span>💰 From $12/mo</span>
+      <span>💰 From $15/mo</span>
       <span>🎁 Free 2 hrs/mo</span>
       <span>📊 Per-episode analytics</span>
     </div>
@@ -202,7 +202,7 @@ I get this question every time. Three reasons:
 
 2. **You won't outgrow it for ~2 years.** Most solo podcasters never need the IAB v2 analytics that Transistor's pricing assumes. By the time you do, you've got episode revenue funding the move.
 
-3. **Honest pricing.** Tiers based on monthly upload hours, not artificial feature paywalls. The $12/mo plan is genuinely complete for a weekly 30-minute show.
+3. **Honest pricing.** Tiers based on monthly upload hours, not artificial feature paywalls. The $15/mo plan is genuinely complete for a weekly 30-minute show.
 
 If you've already tried Buzzsprout and it didn't fit — drop me a note about what you needed instead. I update this list every quarter based on real reader feedback.
 

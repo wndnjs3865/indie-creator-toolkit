@@ -24,7 +24,7 @@ You're picking between [Notion](https://notion.so) and [Trello](https://trello.c
 | | Notion | Trello |
 |---|---|---|
 | Free tier | <span class="yes">✓</span> Personal, unlimited blocks | <span class="yes">✓</span> Unlimited cards, 10 boards |
-| Starting paid | $10/user/mo | $5/user/mo |
+| Starting paid | $14/user/mo | $5/user/mo |
 | Database views | <span class="yes">✓</span> Kanban, table, calendar, gallery | Kanban only (Power-Up for calendar) |
 | Docs / wiki | <span class="yes">✓</span> Native | <span class="no">✗</span> |
 | Kanban polish | Good | <span class="yes">✓</span> Best-in-class |
@@ -39,7 +39,7 @@ You're picking between [Notion](https://notion.so) and [Trello](https://trello.c
     <div class="info-top"><h3>Notion</h3><span class="badge badge-pro">All-in-one</span></div>
     <p>The right pick if you want one workspace that holds tasks, docs, databases, and wiki — all linked. Database views (kanban, table, calendar, gallery) replicate Trello's flow when you want kanban, then go further with relational data.</p>
     <div class="stats">
-      <span>💰 Free personal / $10/user/mo Plus</span>
+      <span>💰 Free personal / $14/user/mo Plus</span>
       <span>🗄️ Database + docs in one</span>
       <span>📓 Native wiki</span>
     </div>
@@ -114,7 +114,7 @@ You're picking between [Notion](https://notion.so) and [Trello](https://trello.c
 
 ## The math
 
-Both have meaningful free tiers. At small scale, neither costs anything. At paid tiers, Trello ($5/user/mo) is half Notion's price ($10/user/mo) — but the value comparison only makes sense if you're getting equivalent functionality, and they're aimed at different problems.
+Both have meaningful free tiers. At small scale, neither costs anything. At paid tiers, Trello ($5/user/mo) is half Notion's price ($14/user/mo) — but the value comparison only makes sense if you're getting equivalent functionality, and they're aimed at different problems.
 
 The right way to think about it: if you'd use Notion's database + doc + wiki layer, the $10 is a steal. If you'd use 5% of Notion and live in kanban, Trello at $5 is honest pricing.
 

@@ -24,7 +24,7 @@ You're picking between [Notion](https://notion.so) and [Logseq](https://logseq.c
 | | Notion | Logseq |
 |---|---|---|
 | Free tier | <span class="yes">✓</span> Personal, unlimited blocks | <span class="yes">✓</span> Fully free |
-| Starting paid | $10/user/mo | <span class="yes">$0 (free forever)</span> |
+| Starting paid | $14/user/mo | <span class="yes">$0 (free forever)</span> |
 | Hosting | Cloud-hosted | <span class="yes">✓</span> Local-first |
 | Open source | <span class="no">✗</span> | <span class="yes">✓</span> AGPL |
 | Database views | <span class="yes">✓</span> Kanban, table, calendar, gallery | Limited (outliner-style) |
@@ -41,7 +41,7 @@ You're picking between [Notion](https://notion.so) and [Logseq](https://logseq.c
     <div class="info-top"><h3>Notion</h3><span class="badge badge-pro">All-in-one</span></div>
     <p>The right pick if you collaborate or want one workspace that holds tasks, docs, databases, and wiki — all linked. Database views go beyond what any outliner can do, and the block editor handles embeds (videos, code, mockups) better than any local-first tool.</p>
     <div class="stats">
-      <span>💰 Free personal / $10/user/mo Plus</span>
+      <span>💰 Free personal / $14/user/mo Plus</span>
       <span>🗄️ Database + docs in one</span>
       <span>👥 Team-friendly</span>
     </div>
@@ -116,7 +116,7 @@ You're picking between [Notion](https://notion.so) and [Logseq](https://logseq.c
 
 ## The math
 
-Logseq is $0, forever, no asterisks — so the cost comparison is moot. The interesting comparison is "what does Notion's $10/mo (or free, if solo) buy that Logseq doesn't have?"
+Logseq is $0, forever, no asterisks — so the cost comparison is moot. The interesting comparison is "what does Notion's $14/mo (or free, if solo) buy that Logseq doesn't have?"
 
 The honest answer: collaboration, database views, embed-rich blocks, and managed sync. If those matter, Notion is worth the cost. If they don't, Logseq's free + local-first is dominant.
 

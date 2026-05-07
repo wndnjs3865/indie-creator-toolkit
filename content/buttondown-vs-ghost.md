@@ -24,7 +24,7 @@ You're picking between [Buttondown](https://buttondown.com) and [Ghost](https://
 | | Buttondown | Ghost |
 |---|---|---|
 | Free tier | <span class="yes">✓</span> Up to 100 subs | <span class="yes">✓</span> Self-hosted free |
-| Starting paid | $9/mo | $9/mo managed |
+| Starting paid | $9/mo | $18/mo managed |
 | Composer | <span class="yes">✓</span> Markdown-first | Block editor (markdown supported) |
 | Blog included | <span class="no">✗</span> Newsletter-only | <span class="yes">✓</span> Newsletter + blog |
 | Open source | <span class="no">✗</span> | <span class="yes">✓</span> MIT |
@@ -75,9 +75,9 @@ You're picking between [Buttondown](https://buttondown.com) and [Ghost](https://
   <div class="logo b5">G</div>
   <div class="info">
     <div class="info-top"><h3>Ghost</h3><span class="badge badge-free">Open source</span></div>
-    <p>The right answer if you want a newsletter <em>and</em> a blog on the same domain, with full control. Self-host for free, or use Ghost(Pro) managed hosting from $9/mo. Open source under MIT — no company can pull your stack out from under you.</p>
+    <p>The right answer if you want a newsletter <em>and</em> a blog on the same domain, with full control. Self-host for free, or use Ghost(Pro) managed hosting from $18/mo. Open source under MIT — no company can pull your stack out from under you.</p>
     <div class="stats">
-      <span>💰 $0 self-host · $9/mo managed</span>
+      <span>💰 $0 self-host · $18/mo managed</span>
       <span>🆓 Open source (MIT)</span>
       <span>💳 Native Stripe</span>
     </div>
@@ -114,7 +114,7 @@ You're picking between [Buttondown](https://buttondown.com) and [Ghost](https://
 
 ## The math
 
-Both start at $9/mo paid. The cost difference is roughly nil at small scale. Past 1,000 subs, both scale similarly into the $20-50/mo range.
+Buttondown starts at $9/mo; Ghost(Pro) at $18/mo (annual billing). Buttondown is the cheaper paid tier at small scale. Past ~1,000 subs both scale into the $20-60/mo range and the gap narrows.
 
 The non-monetary trade-off matters more: Ghost is open source, which is irreversible insurance against platform risk. Buttondown is a SaaS — if the company sunsets or pivots, you migrate. Both have full export, so neither is a true lock-in.
 

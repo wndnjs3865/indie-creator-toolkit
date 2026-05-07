@@ -24,7 +24,7 @@ You're picking between [beehiiv](https://beehiiv.com) and [Buttondown](https://b
 | | beehiiv | Buttondown |
 |---|---|---|
 | Free tier | <span class="yes">✓</span> Up to 2,500 subs | <span class="yes">✓</span> Up to 100 subs |
-| Starting paid | $39/mo | <span class="yes">$9/mo</span> |
+| Starting paid | $43/mo | <span class="yes">$9/mo</span> |
 | Composer | Rich-text + blocks | <span class="yes">✓</span> Markdown-first |
 | Referral program | <span class="yes">✓</span> Native | <span class="no">✗</span> |
 | Ad marketplace | <span class="yes">✓</span> Native | <span class="no">✗</span> |
@@ -39,7 +39,7 @@ You're picking between [beehiiv](https://beehiiv.com) and [Buttondown](https://b
     <div class="info-top"><h3>beehiiv</h3><span class="badge badge-popular">Growth-focused</span></div>
     <p>Built for newsletter writers who treat growth as a product. Native referral program (no plugins), an ad marketplace that buys inventory across the network, and analytics that go deeper than Substack's. Free tier is generous (2,500 subs) for validation.</p>
     <div class="stats">
-      <span>💰 From $39/mo</span>
+      <span>💰 From $43/mo</span>
       <span>🚀 Native referral + ads</span>
       <span>🎁 Free up to 2.5k subs</span>
     </div>
@@ -112,7 +112,7 @@ You're picking between [beehiiv](https://beehiiv.com) and [Buttondown](https://b
 
 ## The math
 
-At 5,000 subs (above beehiiv's free tier), beehiiv's paid plan starts at $39/mo. Buttondown's equivalent tier is roughly $19-29/mo. Past ~10k subs, the gap widens — beehiiv jumps to $84/mo+, Buttondown stays in the $50-70 range.
+At 5,000 subs (above beehiiv's free tier), beehiiv's paid plan starts at $43/mo. Buttondown's equivalent tier is roughly $19-29/mo. Past ~10k subs, the gap widens — beehiiv jumps to $84/mo+, Buttondown stays in the $50-70 range.
 
 The trade-off: beehiiv's referral mechanics + ad marketplace can *generate* revenue that pays for the higher fees. Buttondown is pure cost-minimization with no built-in monetization beyond paid subscriptions.
 

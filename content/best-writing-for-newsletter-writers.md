@@ -24,7 +24,7 @@ You write alone. You edit alone. The last thing you want is a writing tool that 
 | Tool | Free tier | Starting price | Best for | Open source |
 |---|---|---|---|---|
 | **[Obsidian](https://obsidian.md)** <span class="badge badge-best">Top pick</span> | <span class="yes">✓</span> Fully featured personal use | $0 | Local-first markdown writers | <span class="no">✗</span> |
-| **[Notion](https://notion.so)** <span class="badge badge-pro">All-in-one</span> | <span class="yes">✓</span> Personal, unlimited blocks | $10/mo Plus | Database-driven workflows | <span class="no">✗</span> |
+| **[Notion](https://notion.so)** <span class="badge badge-pro">All-in-one</span> | <span class="yes">✓</span> Personal, unlimited blocks | $14/mo Plus | Database-driven workflows | <span class="no">✗</span> |
 | **[Logseq](https://logseq.com)** <span class="badge badge-free">Open source</span> | <span class="yes">✓</span> Fully free | $0 | Outliner-style research | <span class="yes">✓</span> |
 | **[Scrivener](https://www.literatureandlatte.com/scrivener)** <span class="badge badge-budget">Long-form</span> | <span class="yes">✓</span> 30-day usage trial | $60 once | Long-form essay/book writers | <span class="no">✗</span> |
 
@@ -72,7 +72,7 @@ You write alone. You edit alone. The last thing you want is a writing tool that 
     <div class="info-top"><h3>Notion</h3><span class="badge badge-pro">All-in-one</span></div>
     <p>The right pick if your newsletter is part of a broader business — content calendar, sponsor CRM, drafts, and team docs all in one workspace. Database views (kanban, calendar, gallery) make editorial planning easier than any markdown editor.</p>
     <div class="stats">
-      <span>💰 Free personal / $10/mo Plus</span>
+      <span>💰 Free personal / $14/mo Plus</span>
       <span>🗄️ Database-driven docs</span>
       <span>👥 Team-friendly</span>
     </div>

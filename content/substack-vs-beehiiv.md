@@ -24,7 +24,7 @@ You're picking between [Substack](https://substack.com) and [beehiiv](https://be
 | | Substack | beehiiv |
 |---|---|---|
 | Free tier | <span class="yes">✓</span> Free to publish; 10% take on paid subs | <span class="yes">✓</span> Up to 2,500 subscribers free |
-| Starting paid | Free | $39/mo |
+| Starting paid | Free | $43/mo |
 | Open source | <span class="no">✗</span> | <span class="no">✗</span> |
 | Platform | Web | Web |
 | Best for | zero-setup paid newsletter | growth-focused newsletters chasing referral mechanics |
@@ -70,7 +70,7 @@ You're picking between [Substack](https://substack.com) and [beehiiv](https://be
     <div class="info-top"><h3>beehiiv</h3><span class="badge badge-pro">Pro</span></div>
     <p>Growth-focused newsletters chasing referral mechanics. Up to 2,500 subscribers free.</p>
     <div class="stats">
-      <span>💰 From $39/mo</span>
+      <span>💰 From $43/mo</span>
       <span>🌐 Web</span>
       <span>🔒 Proprietary</span>
     </div>

@@ -25,7 +25,7 @@ You write alone. You revise alone. The last thing you want is a $299 Final Draft
 |---|---|---|---|---|
 | **[Scrivener](https://www.literatureandlatte.com/scrivener)** <span class="badge badge-best">Top pick</span> | <span class="yes">✓</span> 30-day usage trial | $60 once | Long-form structure + screenplay export | <span class="no">✗</span> |
 | **[Obsidian](https://obsidian.md)** <span class="badge badge-popular">Research</span> | <span class="yes">✓</span> Fully featured personal | $0 | Character bibles + worldbuilding | <span class="no">✗</span> |
-| **[Notion](https://notion.so)** <span class="badge badge-pro">All-in-one</span> | <span class="yes">✓</span> Personal, unlimited blocks | $10/mo Plus | Production board + database research | <span class="no">✗</span> |
+| **[Notion](https://notion.so)** <span class="badge badge-pro">All-in-one</span> | <span class="yes">✓</span> Personal, unlimited blocks | $14/mo Plus | Production board + database research | <span class="no">✗</span> |
 | **[Logseq](https://logseq.com)** <span class="badge badge-free">Open source</span> | <span class="yes">✓</span> Fully free | $0 | Outliner-style story breakdown | <span class="yes">✓</span> |
 
 ## The contenders, ranked
@@ -108,7 +108,7 @@ You write alone. You revise alone. The last thing you want is a $299 Final Draft
     <div class="info-top"><h3>Notion</h3><span class="badge badge-pro">All-in-one</span></div>
     <p>The pick if you're running production logistics alongside your draft — shot lists, schedule, location scouts, contact lists. Database views (kanban, calendar, gallery) turn pre-production into a workspace your collaborators can actually navigate.</p>
     <div class="stats">
-      <span>💰 Free personal / $10/mo Plus</span>
+      <span>💰 Free personal / $14/mo Plus</span>
       <span>🗄️ Database views for production</span>
       <span>👥 Easy team-share</span>
     </div>

@@ -15,7 +15,7 @@ You're picking between [Buzzsprout](https://buzzsprout.com) and [Spotify for Pod
   <div class="quickpick-icon">🎙️</div>
   <div class="quickpick-content">
     <h4>Quick pick: <a href="https://buzzsprout.com">Buzzsprout</a> for serious solo podcasters, <a href="https://podcasters.spotify.com">Spotify for Podcasters</a> for zero-budget Spotify-first</h4>
-    <p>If you're treating podcasting as a long-term project and you want clean analytics, friendly UX, and the best directory submission in the business, Buzzsprout earns its $12/mo. If you're broke and your audience already lives on Spotify, Spotify for Podcasters is genuinely free and unlimited.</p>
+    <p>If you're treating podcasting as a long-term project and you want clean analytics, friendly UX, and the best directory submission in the business, Buzzsprout earns its $15/mo. If you're broke and your audience already lives on Spotify, Spotify for Podcasters is genuinely free and unlimited.</p>
   </div>
 </div>
 
@@ -24,7 +24,7 @@ You're picking between [Buzzsprout](https://buzzsprout.com) and [Spotify for Pod
 | | Buzzsprout | Spotify for Podcasters |
 |---|---|---|
 | Free tier | <span class="yes">✓</span> 2 hrs/mo, 90-day retention | <span class="yes">✓</span> Unlimited, forever |
-| Starting paid | $12/mo | $0 (free forever) |
+| Starting paid | $15/mo | $0 (free forever) |
 | Analytics | <span class="yes">✓</span> Best-in-class clean dashboard | OK, Spotify-focused |
 | Directory submission | <span class="yes">✓</span> 1-form to all major apps | Spotify-first, others manual |
 | Monetization | Affiliate marketplace | <span class="yes">✓</span> Native ads (US/UK only) |
@@ -41,7 +41,7 @@ You're picking between [Buzzsprout](https://buzzsprout.com) and [Spotify for Pod
     <div class="info-top"><h3>Buzzsprout</h3><span class="badge badge-best">Top pick</span></div>
     <p>The default recommendation for serious solo podcasters. Fair pricing tiers based on monthly upload hours, clean analytics dashboard, and the best directory-submission flow in the business. Magic Mastering (1-click audio cleanup) papers over imperfect recording rooms.</p>
     <div class="stats">
-      <span>💰 From $12/mo</span>
+      <span>💰 From $15/mo</span>
       <span>🎁 Free 2 hrs/mo (90-day retention)</span>
       <span>📊 Per-episode analytics</span>
     </div>
@@ -109,12 +109,12 @@ You're picking between [Buzzsprout](https://buzzsprout.com) and [Spotify for Pod
 
 ## How to choose
 
-- **Pick [Buzzsprout](https://buzzsprout.com)** if you're treating podcasting as a serious long-term project. Clean analytics + 1-form directory submission + Magic Mastering pay back the $12/mo within the first season.
+- **Pick [Buzzsprout](https://buzzsprout.com)** if you're treating podcasting as a serious long-term project. Clean analytics + 1-form directory submission + Magic Mastering pay back the $15/mo within the first season.
 - **Pick [Spotify for Podcasters](https://podcasters.spotify.com)** if your audience already lives on Spotify, your budget is genuinely zero, and you don't need granular analytics.
 
 ## The math
 
-Spotify for Podcasters is $0, forever. Buzzsprout starts at $12/mo ($144/yr). Across two years that's $288 — meaningful for a solo project that isn't earning yet.
+Spotify for Podcasters is $0, forever. Buzzsprout starts at $15/mo ($144/yr). Across two years that's $288 — meaningful for a solo project that isn't earning yet.
 
 The trade-off: Buzzsprout's analytics + Magic Mastering + cross-platform distribution earn back the cost via better growth and less production friction. Spotify gives you native discovery on Spotify but you're locked into Spotify-specific stats — migrating to Buzzsprout later means losing those numbers.
 

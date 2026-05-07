@@ -24,7 +24,7 @@ You're picking between [Notion](https://notion.so) and [Obsidian](https://obsidi
 | | Notion | Obsidian |
 |---|---|---|
 | Free tier | <span class="yes">✓</span> Personal, unlimited blocks | <span class="yes">✓</span> Fully featured personal |
-| Starting paid | $10/user/mo | $0 (sync add-on $4/mo) |
+| Starting paid | $14/user/mo | $0 (sync add-on $4/mo) |
 | Hosting | Cloud-hosted | <span class="yes">✓</span> Local-first |
 | File format | Notion database | <span class="yes">✓</span> Plain markdown |
 | Database views | <span class="yes">✓</span> Kanban, table, calendar, gallery | Limited (plugins) |
@@ -42,7 +42,7 @@ You're picking between [Notion](https://notion.so) and [Obsidian](https://obsidi
     <div class="info-top"><h3>Notion</h3><span class="badge badge-pro">All-in-one</span></div>
     <p>The right pick if you collaborate or want one workspace that holds tasks, docs, databases, and wiki — all linked. Database views go beyond what any local-first tool can do, and the block editor handles embeds (videos, code, mockups) better than anything else.</p>
     <div class="stats">
-      <span>💰 Free personal / $10/user/mo Plus</span>
+      <span>💰 Free personal / $14/user/mo Plus</span>
       <span>🗄️ Database + docs in one</span>
       <span>👥 Team-friendly</span>
     </div>

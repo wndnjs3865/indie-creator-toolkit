@@ -9,7 +9,7 @@ pattern: free-alts
 updated: 2026-05-07
 ---
 
-[Notion](https://notion.so)'s paid plan starts at $10/user/mo. The personal free tier is genuinely generous — but if you've outgrown it (collaboration, version history, larger workspaces), or you specifically want a tool you own, here are the alternatives I'd actually recommend in 2026.
+[Notion](https://notion.so)'s paid plan starts at $14/user/mo. The personal free tier is genuinely generous — but if you've outgrown it (collaboration, version history, larger workspaces), or you specifically want a tool you own, here are the alternatives I'd actually recommend in 2026.
 
 <div class="quickpick">
   <div class="quickpick-icon">📓</div>
@@ -101,7 +101,7 @@ updated: 2026-05-07
 
 ## When you should just pay for Notion
 
-If you collaborate, embed lots of media, or specifically rely on database views (kanban, calendar, gallery), Notion's $10/mo is genuinely earning its keep. Free alternatives are right when you're solo, you write prose-shaped output, and you'd rather own your files than rent a workspace.
+If you collaborate, embed lots of media, or specifically rely on database views (kanban, calendar, gallery), Notion's $14/mo is genuinely earning its keep. Free alternatives are right when you're solo, you write prose-shaped output, and you'd rather own your files than rent a workspace.
 
 ## What to skip
 

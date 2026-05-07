@@ -23,9 +23,9 @@ You plan alone. You publish alone. The last thing you need is a project tool bui
 
 | Tool | Free tier | Starting price | Best for | Open source |
 |---|---|---|---|---|
-| **[Notion](https://notion.so)** <span class="badge badge-best">Top pick</span> | <span class="yes">✓</span> Personal, unlimited blocks | $10/user/mo | Editorial calendar + sponsor pipeline | <span class="no">✗</span> |
+| **[Notion](https://notion.so)** <span class="badge badge-best">Top pick</span> | <span class="yes">✓</span> Personal, unlimited blocks | $14/user/mo | Editorial calendar + sponsor pipeline | <span class="no">✗</span> |
 | **[Trello](https://trello.com)** <span class="badge badge-budget">Simplest</span> | <span class="yes">✓</span> Unlimited cards, 10 boards | $5/user/mo | Pure kanban for drafts | <span class="no">✗</span> |
-| **[Linear](https://linear.app)** <span class="badge badge-pro">Dev-grade</span> | <span class="yes">✓</span> 10 users / 250 issues | $8/user/mo | Tech newsletters with launch tracking | <span class="no">✗</span> |
+| **[Linear](https://linear.app)** <span class="badge badge-pro">Dev-grade</span> | <span class="yes">✓</span> 10 users / 250 issues | $10/user/mo | Tech newsletters with launch tracking | <span class="no">✗</span> |
 
 ## The contenders, ranked
 
@@ -35,7 +35,7 @@ You plan alone. You publish alone. The last thing you need is a project tool bui
     <div class="info-top"><h3>Notion</h3><span class="badge badge-best">Top pick</span></div>
     <p>The default recommendation for newsletter writers. Calendar view for the editorial schedule, kanban for draft status (idea → drafting → editing → scheduled → sent), database for sponsor pipeline. Free tier covers solo workflows indefinitely.</p>
     <div class="stats">
-      <span>💰 Free personal / $10/user/mo</span>
+      <span>💰 Free personal / $14/user/mo</span>
       <span>📅 Calendar + kanban + database</span>
       <span>📓 Native wiki for SOPs</span>
     </div>
@@ -107,7 +107,7 @@ You plan alone. You publish alone. The last thing you need is a project tool bui
     <div class="info-top"><h3>Linear</h3><span class="badge badge-pro">Dev-grade</span></div>
     <p>The pick if you write a technical or developer-tools newsletter and you're already in Linear for code work. Cycles map nicely to weekly newsletter cadence. Overkill for non-technical writers — but if you live in keyboard shortcuts, it's the fastest tool of the three.</p>
     <div class="stats">
-      <span>💰 $0 free / $8/user/mo</span>
+      <span>💰 $0 free / $10/user/mo</span>
       <span>⌨️ Keyboard-first</span>
       <span>🔁 Cycles ≈ weekly cadence</span>
     </div>

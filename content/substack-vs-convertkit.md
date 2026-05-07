@@ -24,12 +24,12 @@ You're picking between [Substack](https://substack.com) and [Kit (formerly Conve
 | | Substack | Kit (ConvertKit) |
 |---|---|---|
 | Free tier | <span class="yes">✓</span> Free to publish | <span class="yes">✓</span> Up to 10,000 subs |
-| Starting paid | $0 | $25/mo |
+| Starting paid | $0 | $33/mo |
 | Revenue share | <span class="no">10% on paid subs</span> | <span class="yes">0%</span> |
 | Built-in audience | <span class="yes">✓</span> Recommendations + Notes | <span class="no">✗</span> Bring your own |
 | Automation / sequences | <span class="no">✗</span> Broadcasts only | <span class="yes">✓</span> Best-in-class |
 | Owns the list | Export available | <span class="yes">✓</span> Fully |
-| Custom domain | Free | $25/mo Creator tier |
+| Custom domain | Free | $33/mo Creator tier |
 | Best for | Zero-setup paid newsletter | Serious operators owning a list |
 
 ## The contenders
@@ -77,7 +77,7 @@ You're picking between [Substack](https://substack.com) and [Kit (formerly Conve
     <div class="info-top"><h3>Kit (formerly ConvertKit)</h3><span class="badge badge-best">Top pick for serious</span></div>
     <p>The right pick if you treat your newsletter as a long-term business asset. The 10,000-subscriber free tier is the most generous in the category, automation is best-in-class, and you own the list — export and leave any time.</p>
     <div class="stats">
-      <span>💰 Free up to 10k subs / $25/mo paid</span>
+      <span>💰 Free up to 10k subs / $33/mo paid</span>
       <span>⚙️ Automation best-in-class</span>
       <span>📤 Full export</span>
     </div>
@@ -102,7 +102,7 @@ You're picking between [Substack](https://substack.com) and [Kit (formerly Conve
       <li>Pricing scales fast above 10k subscribers</li>
       <li>Email design tools feel basic next to beehiiv</li>
       <li>No built-in reader-discovery network (you bring the audience)</li>
-      <li>Custom domain requires paid Creator tier ($25/mo)</li>
+      <li>Custom domain requires paid Creator tier ($33/mo)</li>
     </ul>
   </div>
 </div>

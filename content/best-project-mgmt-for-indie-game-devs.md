@@ -23,9 +23,9 @@ You design alone. You code alone. You commit alone. The last thing you want is a
 
 | Tool | Free tier | Starting price | Best for | Open source |
 |---|---|---|---|---|
-| **[Linear](https://linear.app)** <span class="badge badge-best">Top pick</span> | <span class="yes">✓</span> 10 users / 250 issues | $8/user/mo | Solo + small dev teams | <span class="no">✗</span> |
+| **[Linear](https://linear.app)** <span class="badge badge-best">Top pick</span> | <span class="yes">✓</span> 10 users / 250 issues | $10/user/mo | Solo + small dev teams | <span class="no">✗</span> |
 | **[Trello](https://trello.com)** <span class="badge badge-budget">Simplest</span> | <span class="yes">✓</span> Unlimited cards, 10 boards | $5/user/mo | Lightweight kanban | <span class="no">✗</span> |
-| **[Notion](https://notion.so)** <span class="badge badge-pro">All-in-one</span> | <span class="yes">✓</span> Personal, unlimited blocks | $10/user/mo | Wiki + tickets in one workspace | <span class="no">✗</span> |
+| **[Notion](https://notion.so)** <span class="badge badge-pro">All-in-one</span> | <span class="yes">✓</span> Personal, unlimited blocks | $14/user/mo | Wiki + tickets in one workspace | <span class="no">✗</span> |
 
 ## The contenders, ranked
 
@@ -35,7 +35,7 @@ You design alone. You code alone. You commit alone. The last thing you want is a
     <div class="info-top"><h3>Linear</h3><span class="badge badge-best">Top pick</span></div>
     <p>The default recommendation for indie game devs. Keyboard-first UI means filing a bug takes two seconds. Cycles (sprints), GitHub integration, and roadmap views are mature enough for a one-person team or a 10-person studio.</p>
     <div class="stats">
-      <span>💰 $0 free / $8/user/mo</span>
+      <span>💰 $0 free / $10/user/mo</span>
       <span>⌨️ Keyboard-first</span>
       <span>🔗 Native GitHub integration</span>
     </div>
@@ -107,7 +107,7 @@ You design alone. You code alone. You commit alone. The last thing you want is a
     <div class="info-top"><h3>Notion</h3><span class="badge badge-pro">All-in-one</span></div>
     <p>The pick if you want your tickets, GDD (game design doc), wiki, and meeting notes in one workspace. Database views (kanban, table, calendar) replicate basic Linear/Trello workflows, while the doc layer keeps your design thinking next to the tickets that implement it.</p>
     <div class="stats">
-      <span>💰 Free personal / $10/user/mo</span>
+      <span>💰 Free personal / $14/user/mo</span>
       <span>🗄️ Database + docs</span>
       <span>📓 Native wiki</span>
     </div>
