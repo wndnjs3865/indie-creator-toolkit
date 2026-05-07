@@ -55,54 +55,119 @@ def find_best_combo(personas, categories, tools, exists):
     return None
 
 
+_LOGO_CLASSES = ["b1", "b2", "b3", "b4", "b5", "b6"]
+_BEST_BADGES = ["badge-best", "badge-pro", "badge-popular", "badge-budget", "badge-free"]
+
+
+def _badge_for_tool(t, idx):
+    """Pick a badge based on tool attributes + position in list."""
+    if idx == 0:
+        return ("badge-best", "Top pick")
+    if t.get("open_source"):
+        return ("badge-free", "Open source")
+    if t["paid_price_usd"] == 0:
+        return ("badge-free", "Free")
+    if t["paid_price_usd"] >= 25:
+        return ("badge-pro", "Pro")
+    if t["paid_price_usd"] <= 13:
+        return ("badge-budget", "Budget")
+    return ("badge-popular", "Popular")
+
+
+def _yes_no(b):
+    return '<span class="yes">✓</span>' if b else '<span class="no">✗</span>'
+
+
 def emit_best(persona, category, tools, slug):
     title = f"Best {category['label']} for {persona['label']} in 2026"
+    picks = tools[:5]
+    names_short = ", ".join(t["name"] for t in picks)
     description = (
-        f"We compared {len(tools)} {category['label']} options for {persona['label']}: "
-        f"free, freemium, and paid. Here are the {min(5, len(tools))} that actually deliver."
+        f"{names_short} — head-to-head for {persona['label']} who want to ship "
+        f"without enterprise overhead."
     )
 
-    # SD-004: max 5 affiliate-eligible tools per page
-    picks = tools[:5]
-    rows = ["| Tool | Free tier | Starting price | Open source | Best for |",
+    top = picks[0]
+
+    # at-a-glance table with badges
+    rows = ["| Tool | Free tier | Starting price | Best for | Open source |",
             "|---|---|---|---|---|"]
-    sections = []
-    for t in picks:
-        price = "Free" if t["starting_price_usd"] == 0 else f"${t['starting_price_usd']}/mo"
-        oss = "✅" if t.get("open_source") else "—"
-        best = "; ".join(t.get("best_for", [])) or "—"
-        rows.append(f"| **[{t['name']}]({t['homepage']})** | {t['free_tier']} | {price} | {oss} | {best} |")
+    for i, t in enumerate(picks):
+        cls, label = _badge_for_tool(t, i)
+        price = "$0" if t["paid_price_usd"] == 0 else f"${t['paid_price_usd']}/mo"
+        free = _yes_no(t["starting_price_usd"] == 0)
+        oss = _yes_no(t.get("open_source"))
+        best_for = (t.get("best_for") or ["—"])[0]
+        rows.append(
+            f"| **[{t['name']}]({t['homepage']})** "
+            f'<span class="badge {cls}">{label}</span> '
+            f"| {free} {t['free_tier']} | {price} | {best_for} | {oss} |"
+        )
 
-        pros = "\n".join(f"- {x}" for x in t.get("pros", []))
-        cons = "\n".join(f"- {x}" for x in t.get("cons", []))
-        platform = t.get("platform", "—")
-        sections.append(f"""### {t['name']}
+    # tool cards + pros/cons per tool
+    cards = []
+    for i, t in enumerate(picks):
+        cls, label = _badge_for_tool(t, i)
+        logo_cls = _LOGO_CLASSES[i % len(_LOGO_CLASSES)]
+        initial = t["name"][0].upper()
+        price = "Free forever" if t["paid_price_usd"] == 0 else f"From ${t['paid_price_usd']}/mo"
+        free_pill = f"🎁 {t['free_tier']}" if t["starting_price_usd"] == 0 else "💰 paid only"
+        platform_pill = f"🌐 {t.get('platform', '—').split(',')[0]}"
+        pros_li = "\n".join(f"      <li>{x}</li>" for x in t.get("pros", []))
+        cons_li = "\n".join(f"      <li>{x}</li>" for x in t.get("cons", []))
+        intro = (
+            f"The default recommendation for {persona['label'].lower()}. "
+            f"{(t.get('best_for') or ['Solid pick'])[0].capitalize()}."
+            if i == 0
+            else f"{(t.get('best_for') or ['Solid pick for'])[0].capitalize()} — "
+                 f"another option in the {category['label']} space."
+        )
+        cards.append(f"""<div class="tool-card">
+  <div class="logo {logo_cls}">{initial}</div>
+  <div class="info">
+    <div class="info-top"><h3>{t['name']}</h3><span class="badge {cls}">{label}</span></div>
+    <p>{intro}</p>
+    <div class="stats">
+      <span>💰 {price}</span>
+      <span>{free_pill}</span>
+      <span>{platform_pill}</span>
+    </div>
+  </div>
+  <a href="{t['homepage']}" class="cta">Try {t['name']} →</a>
+</div>
 
-**Free tier**: {t['free_tier']}
-**Pricing**: {'Free forever' if t['paid_price_usd'] == 0 else f"From ${t['starting_price_usd']}/mo, ${t['paid_price_usd']}/mo for full features"}
-**Platform**: {platform}
-
-[{t['name']}]({t['homepage']}) is a strong pick for {persona['label']} working in {category['label']} because it directly addresses the workflow without forcing you onto an enterprise plan.
-
-**Pros**
-{pros or '- Solid all-rounder'}
-
-**Cons**
-{cons or '- Some workflows need a paid upgrade'}
+<div class="pros-cons">
+  <div class="pros">
+    <h4>✓ Strengths</h4>
+    <ul>
+{pros_li or '      <li>Solid all-rounder</li>'}
+    </ul>
+  </div>
+  <div class="cons">
+    <h4>✗ Trade-offs</h4>
+    <ul>
+{cons_li or '      <li>Some workflows need a paid upgrade</li>'}
+    </ul>
+  </div>
+</div>
 """)
 
-    faq = f"""## FAQ
+    # decision tree
+    decision_lines = []
+    for t in picks:
+        bf = (t.get("best_for") or ["broad fit"])[0]
+        decision_lines.append(
+            f"- **You want {bf}** → [{t['name']}]({t['homepage']})."
+        )
 
-**Is there a truly free option for {category['label']}?**
-Yes — {next((t['name'] for t in picks if t['paid_price_usd'] == 0), 'most picks here')} is free forever.
-For everything else, the free tier is enough to validate before paying.
-
-**What's the cheapest paid option that's still serious?**
-{min(picks, key=lambda x: x['paid_price_usd'] if x['paid_price_usd'] > 0 else 1e9)['name']} at ${min((t['paid_price_usd'] for t in picks if t['paid_price_usd'] > 0), default=0)}/mo.
-
-**Do I need {category['label']} at all when starting out?**
-Honestly, no. Most {persona['label'].rstrip('s')} ship their first project with whatever's on their laptop already. Tools matter once friction starts costing you hours per week.
-"""
+    # quickpick
+    quickpick = f"""<div class="quickpick">
+  <div class="quickpick-icon">🛠️</div>
+  <div class="quickpick-content">
+    <h4>Quick pick: <a href="{top['homepage']}">{top['name']}</a></h4>
+    <p>Best for 90% of {persona['label'].lower()} in 2026. {top['free_tier']}. Skip the comparison if you want to ship fast — sign up here.</p>
+  </div>
+</div>"""
 
     fm = (
         "---\n"
@@ -112,24 +177,21 @@ Honestly, no. Most {persona['label'].rstrip('s')} ship their first project with 
         f"persona: {persona['id']}\n"
         f"persona_label: \"{persona['label']}\"\n"
         f"category: {category['id']}\n"
-        f"pattern: best\n"
+        f"pattern: list\n"
         f"updated: {dt.date.today().isoformat()}\n"
         "---\n\n"
     )
     body = (
-        f"If you're a {persona['label'].rstrip('s')} starting out, the right "
-        f"{category['label']} can save you hours every week. We compared {len(tools)} "
-        f"options and picked the {len(picks)} that actually deliver without forcing "
-        "you onto an enterprise plan.\n\n"
-        "## Quick comparison\n\n" + "\n".join(rows) + "\n\n"
-        "## Detailed picks\n\n" + "\n".join(sections) + "\n"
-        + faq + "\n"
-        "## How we picked\n\n"
-        "We prioritized (1) genuine free tiers (not 14-day trials), "
-        "(2) export/portability so you can leave without losing data, "
-        "(3) recent activity (updated within the last 12 months), "
-        "(4) a workflow that fits a one-person team.\n\n"
-        "## Disclosure\n\n"
+        f"You ship alone. The last thing you want is a {category['label']} tool built for "
+        f"enterprise teams. Below are the {len(picks)} I'd actually recommend to a {persona['label'].rstrip('s').lower()} "
+        f"in 2026 — picked for honest pricing, real free tiers, and the ability to *grow with your work*.\n\n"
+        + quickpick + "\n\n"
+        "## At a glance\n\n" + "\n".join(rows) + "\n\n"
+        "## The contenders, ranked\n\n"
+        + "\n---\n\n".join(cards) + "\n"
+        "## How to choose in under 60 seconds\n\n"
+        + "\n".join(decision_lines) + "\n\n"
+        "## Honest disclosure\n\n"
         "Some links above are affiliate links. We earn a small commission "
         "if you sign up — at no extra cost to you. We only feature tools "
         "we'd recommend regardless.\n"
@@ -162,29 +224,71 @@ def find_vs_combo(tools, exists):
 
 def emit_vs(a, b, category, slug):
     title = f"{a['name']} vs {b['name']}: which is right for you in 2026"
-    description = f"Honest head-to-head: {a['name']} vs {b['name']}. Pricing, free tiers, pros, cons, and who should pick which."
+    description = (
+        f"{a['name']} vs {b['name']} head-to-head. Free tiers, pricing, ownership — "
+        f"the honest call for {category.replace('-', ' ')} in 2026."
+    )
 
-    def price_cell(t, key):
-        v = t[key]
-        return "Free" if v == 0 else f"${v}/mo"
-    def paid_cell(t):
-        v = t["paid_price_usd"]
-        return "—" if v == 0 else f"${v}/mo"
+    def yn(b_val):
+        return _yes_no(b_val)
+    def price_str(t):
+        return "Free" if t["paid_price_usd"] == 0 else f"${t['paid_price_usd']}/mo"
+
+    a_cls, a_label = _badge_for_tool(a, 0)
+    b_cls, b_label = _badge_for_tool(b, 1)
+
+    quickpick = f"""<div class="quickpick">
+  <div class="quickpick-icon">⚖️</div>
+  <div class="quickpick-content">
+    <h4>Quick pick: <a href="{a['homepage']}">{a['name']}</a> for {(a.get('best_for') or ['most users'])[0]}, <a href="{b['homepage']}">{b['name']}</a> for {(b.get('best_for') or ['specialists'])[0]}</h4>
+    <p>Both work in 2026. The right pick depends on whether you value {(a.get('pros') or [''])[0].lower() or 'simplicity'} (pick {a['name']}) or {(b.get('pros') or [''])[0].lower() or 'control'} (pick {b['name']}).</p>
+  </div>
+</div>"""
 
     table = [
         f"| | {a['name']} | {b['name']} |",
         "|---|---|---|",
-        f"| Free tier | {a['free_tier']} | {b['free_tier']} |",
-        f"| Starting price | {price_cell(a, 'starting_price_usd')} | {price_cell(b, 'starting_price_usd')} |",
-        f"| Paid price | {paid_cell(a)} | {paid_cell(b)} |",
-        f"| Platform | {a.get('platform','—')} | {b.get('platform','—')} |",
-        f"| Open source | {'Yes' if a.get('open_source') else 'No'} | {'Yes' if b.get('open_source') else 'No'} |",
+        f"| Free tier | {yn(a['starting_price_usd'] == 0)} {a['free_tier']} | {yn(b['starting_price_usd'] == 0)} {b['free_tier']} |",
+        f"| Starting paid | {price_str(a)} | {price_str(b)} |",
+        f"| Open source | {yn(a.get('open_source'))} | {yn(b.get('open_source'))} |",
+        f"| Platform | {a.get('platform','—').split(',')[0]} | {b.get('platform','—').split(',')[0]} |",
+        f"| Best for | {(a.get('best_for') or ['—'])[0]} | {(b.get('best_for') or ['—'])[0]} |",
     ]
 
-    a_pros = "\n".join(f"- {x}" for x in a.get("pros", []))
-    a_cons = "\n".join(f"- {x}" for x in a.get("cons", []))
-    b_pros = "\n".join(f"- {x}" for x in b.get("pros", []))
-    b_cons = "\n".join(f"- {x}" for x in b.get("cons", []))
+    def card(t, idx, cls, label):
+        logo_cls = _LOGO_CLASSES[idx % len(_LOGO_CLASSES)]
+        initial = t["name"][0].upper()
+        price = "Free forever" if t["paid_price_usd"] == 0 else f"From ${t['paid_price_usd']}/mo"
+        pros_li = "\n".join(f"      <li>{x}</li>" for x in t.get("pros", []))
+        cons_li = "\n".join(f"      <li>{x}</li>" for x in t.get("cons", []))
+        return f"""<div class="tool-card">
+  <div class="logo {logo_cls}">{initial}</div>
+  <div class="info">
+    <div class="info-top"><h3>{t['name']}</h3><span class="badge {cls}">{label}</span></div>
+    <p>{(t.get('best_for') or ['A solid option'])[0].capitalize()}. {t['free_tier']}.</p>
+    <div class="stats">
+      <span>💰 {price}</span>
+      <span>🌐 {t.get('platform', '—').split(',')[0]}</span>
+      <span>{'🆓 Open source' if t.get('open_source') else '🔒 Proprietary'}</span>
+    </div>
+  </div>
+  <a href="{t['homepage']}" class="cta">Try {t['name']} →</a>
+</div>
+
+<div class="pros-cons">
+  <div class="pros">
+    <h4>✓ {t['name']} strengths</h4>
+    <ul>
+{pros_li or '      <li>Solid all-rounder</li>'}
+    </ul>
+  </div>
+  <div class="cons">
+    <h4>✗ {t['name']} trade-offs</h4>
+    <ul>
+{cons_li or '      <li>Some workflows need workarounds</li>'}
+    </ul>
+  </div>
+</div>"""
 
     fm = (
         "---\n"
@@ -200,19 +304,21 @@ def emit_vs(a, b, category, slug):
     )
     body = (
         f"You're picking between [{a['name']}]({a['homepage']}) and [{b['name']}]({b['homepage']}). "
-        f"Both serve {category.replace('-', ' ')} workflows. Here's how they actually differ.\n\n"
-        "## Side-by-side\n\n" + "\n".join(table) + "\n\n"
-        f"## Where {a['name']} wins\n\n{a_pros}\n\n"
-        f"### {a['name']} downsides\n\n{a_cons}\n\n"
-        f"## Where {b['name']} wins\n\n{b_pros}\n\n"
-        f"### {b['name']} downsides\n\n{b_cons}\n\n"
-        "## Verdict\n\n"
+        f"Both serve {category.replace('-', ' ')} workflows in 2026 — but they differ on pricing, ownership, "
+        "and target audience. Here's the honest call.\n\n"
+        + quickpick + "\n\n"
+        "## At a glance\n\n" + "\n".join(table) + "\n\n"
+        "## The contenders\n\n"
+        + card(a, 0, a_cls, a_label) + "\n\n---\n\n"
+        + card(b, 1, b_cls, b_label) + "\n\n"
+        "## How to choose\n\n"
         f"- **Pick [{a['name']}]({a['homepage']})** if you value: " + ", ".join((a.get("best_for") or ["broad fit"])) + ".\n"
         f"- **Pick [{b['name']}]({b['homepage']})** if you value: " + ", ".join((b.get("best_for") or ["broad fit"])) + ".\n\n"
-        "If you're starting from zero, the free tier of either lets you ship "
-        "your first project before you commit. That's the right way to choose.\n\n"
-        "## Disclosure\n\n"
-        "Links may be affiliate. We only compare tools we'd actually use.\n"
+        "If you're starting from zero, both have free tiers — try one for 30 days, "
+        "see if it fits your workflow before committing further.\n\n"
+        "## Honest disclosure\n\n"
+        "Links may be affiliate. Pricing numbers above are publicly listed as of 2026. "
+        "We only compare tools we'd use ourselves.\n"
     )
     (CONTENT / f"{slug}.md").write_text(fm + body, encoding="utf-8")
     return slug
@@ -239,26 +345,67 @@ def find_free_alts_combo(tools, exists):
 
 def emit_free_alts(target, alts, slug):
     title = f"Free alternatives to {target['name']} in 2026"
-    description = f"{target['name']} not in the budget? Here are {len(alts)} free alternatives that get the job done."
+    description = (
+        f"{target['name']}'s ${target['paid_price_usd']}/mo not in the budget? "
+        f"Here are the genuinely-free alternatives that work in 2026."
+    )
+    top_alt = alts[0]
+
+    quickpick = f"""<div class="quickpick">
+  <div class="quickpick-icon">🆓</div>
+  <div class="quickpick-content">
+    <h4>Quick pick: <a href="{top_alt['homepage']}">{top_alt['name']}</a></h4>
+    <p>The closest free tool to {target['name']} for most workflows. {top_alt['free_tier']}. {('Open source' if top_alt.get('open_source') else 'Free for personal use')} — your data outlives any platform.</p>
+  </div>
+</div>"""
 
     rows = ["| Tool | License | Platform | Best for |", "|---|---|---|---|"]
-    sections = []
-    for t in alts:
+    for i, t in enumerate(alts):
+        cls, label = _badge_for_tool(t, i)
         license_str = "Open source" if t.get("open_source") else "Free (proprietary)"
-        rows.append(f"| **[{t['name']}]({t['homepage']})** | {license_str} | {t.get('platform','—')} | {'; '.join(t.get('best_for',[])) or '—'} |")
-        pros = "\n".join(f"- {x}" for x in t.get("pros", []))
-        sections.append(f"""### {t['name']}
+        bf = (t.get("best_for") or ["—"])[0]
+        rows.append(
+            f"| **[{t['name']}]({t['homepage']})** "
+            f'<span class="badge {cls}">{label}</span> '
+            f"| {license_str} | {t.get('platform','—').split(',')[0]} | {bf} |"
+        )
 
-[{t['name']}]({t['homepage']}) is {('open source' if t.get('open_source') else 'free to use')} and serves the same workflow as {target['name']} for most {('beginners' if target['paid_price_usd'] < 50 else 'pro')} use cases.
+    cards = []
+    for i, t in enumerate(alts):
+        cls, label = _badge_for_tool(t, i)
+        logo_cls = _LOGO_CLASSES[i % len(_LOGO_CLASSES)]
+        initial = t["name"][0].upper()
+        pros_li = "\n".join(f"      <li>{x}</li>" for x in t.get("pros", []))
+        cons_li = "\n".join(f"      <li>{x}</li>" for x in t.get("cons", []))
+        intro_blurb = (t.get("best_for") or ["A solid free alternative"])[0].capitalize()
+        cards.append(f"""<div class="tool-card">
+  <div class="logo {logo_cls}">{initial}</div>
+  <div class="info">
+    <div class="info-top"><h3>{t['name']}</h3><span class="badge {cls}">{label}</span></div>
+    <p>{intro_blurb}. {t['free_tier']}.</p>
+    <div class="stats">
+      <span>💰 Free</span>
+      <span>🌐 {t.get('platform', '—').split(',')[0]}</span>
+      <span>{'🆓 Open source' if t.get('open_source') else '🔒 Proprietary'}</span>
+    </div>
+  </div>
+  <a href="{t['homepage']}" class="cta">Try {t['name']} →</a>
+</div>
 
-**Why it works as a {target['name']} alternative**
-
-{pros or '- Covers the core workflow'}
-
-**Where it falls short of {target['name']}**
-
-If you need {('; '.join(target.get('best_for', [])[:1]) or 'specialized features')}, you'll eventually outgrow this.
-""")
+<div class="pros-cons">
+  <div class="pros">
+    <h4>✓ Why it works as a {target['name']} alternative</h4>
+    <ul>
+{pros_li or '      <li>Covers the core workflow</li>'}
+    </ul>
+  </div>
+  <div class="cons">
+    <h4>✗ Where it falls short</h4>
+    <ul>
+{cons_li or '      <li>You may outgrow it for advanced features</li>'}
+    </ul>
+  </div>
+</div>""")
 
     fm = (
         "---\n"
@@ -274,15 +421,20 @@ If you need {('; '.join(target.get('best_for', [])[:1]) or 'specialized features
     )
     body = (
         f"[{target['name']}]({target['homepage']}) costs ${target['paid_price_usd']}/mo. "
-        "If that's not in the budget yet, here are free options that get most of the job done.\n\n"
-        "## Quick comparison\n\n" + "\n".join(rows) + "\n\n"
-        "## Each alternative in detail\n\n" + "\n".join(sections) + "\n"
+        f"If that's not in the budget yet — or you specifically want open source — here are "
+        f"the genuinely-free alternatives that work in 2026.\n\n"
+        + quickpick + "\n\n"
+        "## At a glance\n\n" + "\n".join(rows) + "\n\n"
+        "## The contenders\n\n"
+        + "\n\n---\n\n".join(cards) + "\n\n"
         f"## When you should just pay for {target['name']}\n\n"
         f"If you're already making money from your work and {target['name']} would save "
         "you 2+ hours/week, the math says pay for it. Free alternatives are right when "
-        "you're validating an idea or learning the craft.\n\n"
-        "## Disclosure\n\n"
-        "Links may be affiliate. We only compare tools we'd actually use.\n"
+        "you're validating an idea, learning the craft, or specifically value open-source "
+        "insurance.\n\n"
+        "## Honest disclosure\n\n"
+        "Links may be affiliate. The free alternatives above are free for personal use. "
+        "We only compare tools we'd use ourselves.\n"
     )
     (CONTENT / f"{slug}.md").write_text(fm + body, encoding="utf-8")
     return slug
