@@ -1,55 +1,136 @@
 ---
 slug: buttondown-vs-ghost
 title: "Buttondown vs Ghost: which is right for you in 2026"
-description: "Honest head-to-head: Buttondown vs Ghost. Pricing, free tiers, pros, cons, and who should pick which."
+description: "Buttondown vs Ghost head-to-head. Markdown-first newsletter vs open-source blog+newsletter. The honest call for technical writers in 2026."
 persona: comparison
 persona_label: "Comparison"
 category: newsletter
 pattern: vs
-updated: 2026-05-01
+updated: 2026-05-07
 ---
 
-You're picking between [Buttondown](https://buttondown.com) and [Ghost](https://ghost.org). Both serve newsletter workflows. Here's how they actually differ.
+You're picking between [Buttondown](https://buttondown.com) and [Ghost](https://ghost.org). Both fit the indie/technical writer profile in 2026 — both are markdown-friendly, both let you own your list, both are at the cheap end of paid pricing. They differ on one fundamental: do you want a newsletter only (Buttondown), or a newsletter *and* a blog on the same domain (Ghost)?
 
-## Side-by-side
+<div class="quickpick">
+  <div class="quickpick-icon">📧</div>
+  <div class="quickpick-content">
+    <h4>Quick pick: <a href="https://buttondown.com">Buttondown</a> for newsletter-only writers, <a href="https://ghost.org">Ghost</a> if you also want a blog</h4>
+    <p>If your output is just newsletter issues, Buttondown is simpler and the markdown-first composer is a joy. If you also publish blog posts and want them on the same domain (with shared subscribers), Ghost is purpose-built for that combo.</p>
+  </div>
+</div>
+
+## At a glance
 
 | | Buttondown | Ghost |
 |---|---|---|
-| Free tier | Up to 100 subscribers free | Self-hosted free; managed from $9/mo |
-| Starting price | Free | Free |
-| Paid price | $9/mo | $9/mo |
-| Platform | Web | Self-host or managed (Web) |
-| Open source | No | Yes |
+| Free tier | <span class="yes">✓</span> Up to 100 subs | <span class="yes">✓</span> Self-hosted free |
+| Starting paid | $9/mo | $9/mo managed |
+| Composer | <span class="yes">✓</span> Markdown-first | Block editor (markdown supported) |
+| Blog included | <span class="no">✗</span> Newsletter-only | <span class="yes">✓</span> Newsletter + blog |
+| Open source | <span class="no">✗</span> | <span class="yes">✓</span> MIT |
+| Native payments | Stripe (paid plan) | <span class="yes">✓</span> Native Stripe |
+| Self-host option | <span class="no">✗</span> | <span class="yes">✓</span> |
+| Best for | Markdown-first newsletter | Newsletter + blog on one domain |
 
-## Where Buttondown wins
+## The contenders
 
-- Markdown-first composition
-- Cheapest paid tier of the lot
-- Indie-developer friendly
+<div class="tool-card">
+  <div class="logo b1">B</div>
+  <div class="info">
+    <div class="info-top"><h3>Buttondown</h3><span class="badge badge-budget">Indie · Markdown</span></div>
+    <p>Built for indie devs and technical writers who just want to ship newsletter issues without ceremony. Markdown-native composition (no WYSIWYG distractions), the cheapest serious paid tier ($9/mo), and an indie founder who responds to support tickets personally.</p>
+    <div class="stats">
+      <span>💰 $9/mo paid</span>
+      <span>📝 Markdown-native</span>
+      <span>🛠️ Strong API + webhooks</span>
+    </div>
+  </div>
+  <a href="https://buttondown.com" class="cta">Try Buttondown →</a>
+</div>
 
-### Buttondown downsides
+<div class="pros-cons">
+  <div class="pros">
+    <h4>✓ Buttondown strengths</h4>
+    <ul>
+      <li>Markdown-first composition — paste from Obsidian/Vim/iA Writer</li>
+      <li>$9/mo is among the cheapest serious paid tiers</li>
+      <li>Strong API + webhooks for technical workflows</li>
+      <li>Indie-developer founder — responsive support</li>
+      <li>Simpler stack — no DevOps required</li>
+    </ul>
+  </div>
+  <div class="cons">
+    <h4>✗ Buttondown trade-offs</h4>
+    <ul>
+      <li>Newsletter only — no blog layer</li>
+      <li>Free tier capped at 100 subs</li>
+      <li>Not open source — you depend on Buttondown the company</li>
+    </ul>
+  </div>
+</div>
 
-- Tiny free tier
-- Less polished than Substack/beehiiv
+---
 
-## Where Ghost wins
+<div class="tool-card">
+  <div class="logo b5">G</div>
+  <div class="info">
+    <div class="info-top"><h3>Ghost</h3><span class="badge badge-free">Open source</span></div>
+    <p>The right answer if you want a newsletter <em>and</em> a blog on the same domain, with full control. Self-host for free, or use Ghost(Pro) managed hosting from $9/mo. Open source under MIT — no company can pull your stack out from under you.</p>
+    <div class="stats">
+      <span>💰 $0 self-host · $9/mo managed</span>
+      <span>🆓 Open source (MIT)</span>
+      <span>💳 Native Stripe</span>
+    </div>
+  </div>
+  <a href="https://ghost.org" class="cta">Try Ghost →</a>
+</div>
 
-- Open source
-- Built-in payments
-- Owns blog + newsletter
+<div class="pros-cons">
+  <div class="pros">
+    <h4>✓ Ghost strengths</h4>
+    <ul>
+      <li>Open source — own your stack end-to-end</li>
+      <li>Newsletter + blog on the same domain — SEO compounding</li>
+      <li>Native Stripe payments, no Memberful/Patreon glue</li>
+      <li>Self-host option for $0 if you can run a Linux box</li>
+      <li>Block editor supports markdown if you want it</li>
+    </ul>
+  </div>
+  <div class="cons">
+    <h4>✗ Ghost trade-offs</h4>
+    <ul>
+      <li>Self-hosting requires real DevOps work</li>
+      <li>Managed hosting (Ghost(Pro)) is the realistic path for most</li>
+      <li>Block editor adds friction vs Buttondown's pure markdown flow</li>
+      <li>More moving parts than a newsletter-only tool</li>
+    </ul>
+  </div>
+</div>
 
-### Ghost downsides
+## How to choose
 
-- Self-hosting requires DevOps
-- Managed hosting is the usual real cost
+- **Pick [Buttondown](https://buttondown.com)** if your output is *only* newsletter issues, you live in markdown editors, and you want zero DevOps. The composer is faster and the stack is simpler.
+- **Pick [Ghost](https://ghost.org)** if you also publish blog posts (or plan to), and you want them on the same domain as your newsletter — same subscribers, same SEO, same brand.
+
+## The math
+
+Both start at $9/mo paid. The cost difference is roughly nil at small scale. Past 1,000 subs, both scale similarly into the $20-50/mo range.
+
+The non-monetary trade-off matters more: Ghost is open source, which is irreversible insurance against platform risk. Buttondown is a SaaS — if the company sunsets or pivots, you migrate. Both have full export, so neither is a true lock-in.
 
 ## Verdict
 
-- **Pick [Buttondown](https://buttondown.com)** if you value: technical writers who want plain markdown email.
-- **Pick [Ghost](https://ghost.org)** if you value: full control over email + blog on the same domain.
+| Situation | Pick |
+|---|---|
+| Newsletter only, markdown-first | **Buttondown** |
+| Newsletter + blog on one domain | **Ghost** |
+| You can run Linux (self-host for $0) | **Ghost** |
+| You want zero DevOps overhead | **Buttondown** |
+| You care about open-source insurance | **Ghost** |
+| You want the simplest possible stack | **Buttondown** |
 
-If you're starting from zero, the free tier of either lets you ship your first project before you commit. That's the right way to choose.
+If you're between the two and not sure whether you'll blog — start with Buttondown. The migration to Ghost later (if you decide to add a blog) is straightforward. The reverse migration (Ghost → Buttondown) is also fine since both speak markdown.
 
-## Disclosure
+## Honest disclosure
 
-Links may be affiliate. We only compare tools we'd actually use.
+We may earn a commission on Buttondown signups (no fee to you). Pricing numbers above are publicly listed as of 2026. We only compare tools we'd use ourselves.
