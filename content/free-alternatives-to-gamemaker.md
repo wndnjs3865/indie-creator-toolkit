@@ -1,7 +1,7 @@
 ---
 slug: free-alternatives-to-gamemaker
 title: "Free alternatives to GameMaker in 2026"
-description: "GameMaker's $80/year commercial license not in the budget? Here are the genuinely-free 2D engine alternatives that work in 2026."
+description: "GameMaker's $25/year Creator (or $100/year Indie) commercial license not in the budget? Here are the genuinely-free 2D engine alternatives that work in 2026."
 persona: free-alternatives
 persona_label: "Free alternatives"
 category: game-engine
@@ -9,7 +9,7 @@ pattern: free-alts
 updated: 2026-05-07
 ---
 
-[GameMaker](https://gamemaker.io) is free for non-commercial use, but $80/year once you ship commercially. If you want a serious 2D engine that's free for commercial work too, here are the alternatives that actually deliver in 2026.
+[GameMaker](https://gamemaker.io) is free for non-commercial use, but $25/year (Creator tier) — or $100/year (Indie) for full commercial work — once you ship. If you want a serious 2D engine that's free for commercial work too, here are the alternatives that actually deliver in 2026.
 
 <div class="quickpick">
   <div class="quickpick-icon">🎮</div>
@@ -99,9 +99,9 @@ updated: 2026-05-07
   </div>
 </div>
 
-## When you should just pay $80/year for GameMaker
+## When you should just pay for GameMaker
 
-If you specifically want the engine with the most shipped commercial 2D hits (Undertale, Hyper Light Drifter, Hotline Miami) and you value drag-and-drop on-ramp, $80/year is honest pricing. Free alternatives are right when you want zero cost, open-source insurance, or transferable skills.
+If you specifically want the engine with the most shipped commercial 2D hits (Undertale, Hyper Light Drifter, Hotline Miami) and you value drag-and-drop on-ramp, $25/year (Creator) or $100/year (Indie) is honest pricing. Free alternatives are right when you want zero cost, open-source insurance, or transferable skills.
 
 ## What to skip
 

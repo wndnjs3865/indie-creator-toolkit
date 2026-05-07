@@ -9,13 +9,13 @@ pattern: vs
 updated: 2026-05-07
 ---
 
-You're picking between [Godot](https://godotengine.org) and [GameMaker](https://gamemaker.io). Both are excellent for 2D games. They differ on licensing model, scripting language portability, and 3D capability. Godot is open source and free forever. GameMaker is closed source with a $80/year commercial license — but it's the engine that shipped Undertale, Hyper Light Drifter, and Hotline Miami. Here's how to pick.
+You're picking between [Godot](https://godotengine.org) and [GameMaker](https://gamemaker.io). Both are excellent for 2D games. They differ on licensing model, scripting language portability, and 3D capability. Godot is open source and free forever. GameMaker is closed source with a tiered subscription ($25/year Creator or $100/year Indie for full commercial work) — but it's the engine that shipped Undertale, Hyper Light Drifter, and Hotline Miami. Here's how to pick.
 
 <div class="quickpick">
   <div class="quickpick-icon">🎮</div>
   <div class="quickpick-content">
     <h4>Quick pick: <a href="https://godotengine.org">Godot</a> for free + transferable, <a href="https://gamemaker.io">GameMaker</a> for the 2D commercial heritage</h4>
-    <p>If you want zero cost and skills that transfer to other engines, Godot wins. If you specifically want the engine with the most shipped commercial 2D hits and you don't mind $80/year, GameMaker's heritage and 2D-specific tooling are unmatched.</p>
+    <p>If you want zero cost and skills that transfer to other engines, Godot wins. If you specifically want the engine with the most shipped commercial 2D hits and you don't mind $25–100/year, GameMaker's heritage and 2D-specific tooling are unmatched.</p>
   </div>
 </div>
 
@@ -24,7 +24,7 @@ You're picking between [Godot](https://godotengine.org) and [GameMaker](https://
 | | Godot | GameMaker |
 |---|---|---|
 | Free tier | <span class="yes">Free, MIT</span> | <span class="yes">✓</span> Non-commercial only |
-| Commercial license | Free | $80/year |
+| Commercial license | Free | $25/yr Creator or $100/yr Indie |
 | Open source | <span class="yes">✓</span> | <span class="no">✗</span> |
 | 2D pipeline | <span class="yes">✓</span> Best-in-class | <span class="yes">✓</span> Battle-tested |
 | 3D pipeline | <span class="yes">✓</span> Capable (4.x) | Minimal |
@@ -77,9 +77,9 @@ You're picking between [Godot](https://godotengine.org) and [GameMaker](https://
   <div class="logo b1">G</div>
   <div class="info">
     <div class="info-top"><h3>GameMaker</h3><span class="badge badge-budget">2D classic</span></div>
-    <p>The engine that shipped Undertale, Hyper Light Drifter, and Hotline Miami. Battle-tested for 2D commercial games with a friendly drag-and-drop on-ramp. $80/year commercial license is honest pricing for a serious tool with this much heritage.</p>
+    <p>The engine that shipped Undertale, Hyper Light Drifter, and Hotline Miami. Battle-tested for 2D commercial games with a friendly drag-and-drop on-ramp. $25/year (Creator) or $100/year (Indie) is honest pricing for a serious tool with this much heritage.</p>
     <div class="stats">
-      <span>💰 Free non-commercial / $80/yr commercial</span>
+      <span>💰 Free non-commercial / $25/yr Creator / $100/yr Indie</span>
       <span>🕹️ 2D heritage (Undertale, HLD, Hotline Miami)</span>
       <span>🎨 Drag-and-drop on-ramp</span>
     </div>
@@ -94,7 +94,7 @@ You're picking between [Godot](https://godotengine.org) and [GameMaker](https://
       <li>Decades of 2D-specific tooling and shipped commercial hits</li>
       <li>Drag-and-drop visual scripting for absolute beginners</li>
       <li>GML language is friendly for non-programmers</li>
-      <li>$80/year commercial license is honest, predictable pricing</li>
+      <li>$25/year Creator or $100/year Indie — honest, predictable pricing</li>
       <li>Mature 2D physics and animation pipelines</li>
     </ul>
   </div>
@@ -112,13 +112,13 @@ You're picking between [Godot](https://godotengine.org) and [GameMaker](https://
 ## How to choose
 
 - **Pick [Godot](https://godotengine.org)** if you want zero cost, open-source insurance, transferable skills, or any 3D capability.
-- **Pick [GameMaker](https://gamemaker.io)** if you specifically want the engine with the most shipped indie 2D hits, you value drag-and-drop on-ramp, and you don't mind $80/year for commercial work.
+- **Pick [GameMaker](https://gamemaker.io)** if you specifically want the engine with the most shipped indie 2D hits, you value drag-and-drop on-ramp, and you don't mind $25–100/year for commercial work.
 
 ## The math
 
-Godot is $0 forever. GameMaker is $0 for non-commercial use, $80/year once you ship a commercial title.
+Godot is $0 forever. GameMaker is $0 for non-commercial use, $25/year (Creator tier) or $100/year (Indie tier) once you ship a commercial title.
 
-The interesting comparison: $80/year over 10 years = $800. That's not a lot of money for a tool you ship a career on. So the cost gap isn't the real argument — the real argument is open source vs proprietary, and skill portability vs GameMaker-specific.
+The interesting comparison: even at the Indie tier, $100/year over 10 years = $1,000. That's not a lot of money for a tool you ship a career on. So the cost gap isn't the real argument — the real argument is open source vs proprietary, and skill portability vs GameMaker-specific.
 
 ## Verdict
 

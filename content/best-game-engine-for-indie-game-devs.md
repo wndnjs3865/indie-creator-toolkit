@@ -26,7 +26,7 @@ You build alone. You ship alone. The last thing you want is a game engine that s
 | **[Godot](https://godotengine.org)** <span class="badge badge-best">Top pick</span> | <span class="yes">✓</span> Fully free, MIT | $0 | 2D + 3D indie, no royalty | <span class="yes">✓</span> |
 | **[Unity](https://unity.com)** <span class="badge badge-pro">Pro</span> | <span class="yes">✓</span> Personal up to $200k/yr | $25/mo Pro | 3D commercial + mobile | <span class="no">✗</span> |
 | **[Defold](https://defold.com)** <span class="badge badge-popular">Mobile</span> | <span class="yes">✓</span> Fully free | $0 | 2D mobile + HTML5 | <span class="yes">✓</span> |
-| **[GameMaker](https://gamemaker.io)** <span class="badge badge-budget">2D classic</span> | <span class="yes">✓</span> Non-commercial only | $80/yr commercial | 2D commercial (Undertale stack) | <span class="no">✗</span> |
+| **[GameMaker](https://gamemaker.io)** <span class="badge badge-budget">2D classic</span> | <span class="yes">✓</span> Non-commercial only | $25/yr Creator | 2D commercial (Undertale stack) | <span class="no">✗</span> |
 
 ## The contenders, ranked
 
@@ -145,7 +145,7 @@ You build alone. You ship alone. The last thing you want is a game engine that s
     <p>The right pick if you specifically want the engine that shipped Undertale, Hyper Light Drifter, and Hotline Miami. Battle-tested for 2D commercial games with a friendly drag-and-drop on-ramp.</p>
     <div class="stats">
       <span>💰 Free for non-commercial</span>
-      <span>💵 $80/yr commercial</span>
+      <span>💵 $25/yr Creator (or $100/yr Indie)</span>
       <span>🕹️ 2D heritage</span>
     </div>
   </div>
@@ -158,7 +158,7 @@ You build alone. You ship alone. The last thing you want is a game engine that s
     <ul>
       <li>Decades of 2D-specific tooling and shipped hits</li>
       <li>GML scripting + drag-and-drop = lowest entry barrier</li>
-      <li>$80/yr commercial license is honest pricing for a serious tool</li>
+      <li>$25/yr Creator tier or $100/yr Indie — honest pricing for a serious tool</li>
     </ul>
   </div>
   <div class="cons">

@@ -277,7 +277,7 @@
       "personas": ["indie-game-devs"],
       "free_tier": "Free for non-commercial use",
       "starting_price_usd": 0,
-      "paid_price_usd": 80,
+      "paid_price_usd": 25,
       "platform": "Mac, Windows",
       "open_source": false,
       "homepage": "https://gamemaker.io",
