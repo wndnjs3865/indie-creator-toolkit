@@ -1,17 +1,27 @@
-# SEO 사이트 — STATUS
+# SEO 사이트 — STATUS (updated 2026-05-07)
 
 ## 다음 자동 액션
-- GitHub Actions `daily-page.yml`: 매일 06:00 UTC 1페이지 자동 생성·머지·배포
+- GitHub Actions `daily-page.yml`: 매일 06:00 UTC 1페이지 자동 생성·머지·배포 (visual-rich format since 5/7)
 - GitHub Actions `weekly-refresh.yml`: 매주 일 03:00 UTC 전체 데이터 갱신
+- GitHub Actions `build.yml`: main push 시 자동 빌드 → Pages 배포
 
 ## 사이트 URL (라이브)
 **https://wndnjs3865.github.io/indie-creator-toolkit/**
 
+## 5/7 ICT Overhaul 완료
+- 42 posts 전체 visual-rich (quickpick + tool-card + pros-cons + badges)
+- 10 ghost 페이지 source 복원 + 변환
+- `generate-page.py` visual-rich 포맷으로 갱신 (daily auto-gen이 일관 포맷 유지)
+- 메모리: `plan_c_x402_decision.md` ICT freeze → active overhaul (founder override)
+
 ## 다음 내가 할 액션
-1. ~~repo + Pages 활성화~~ ✅ 완료 (gh API로 자동 활성화됨)
-2. **Google Search Console 등록 + sitemap 제출**: https://search.google.com/search-console → URL prefix → `https://wndnjs3865.github.io/indie-creator-toolkit/` → HTML 메타 태그 검증 → sitemap URL `sitemap.xml` 제출
-3. **Amazon Associates 가입** (글로벌 + 한국 둘 다)
-4. **PartnerStack / Impact** 가입 + 시드 affiliate 5개 등록 → `data/affiliates.json` 치환 → push
+1. ~~repo + Pages 활성화~~ ✅ 완료
+2. ~~Google Search Console 등록~~ ✅ 메타태그 verification 완료 (`base.html.j2:6`)
+3. **Amazon Associates 가입** ✅ US LIVE (ID `juwon3865-20`, W8BEN 제출). 한국은 PH 런치 후 traffic 확보 시
+4. **PartnerStack / Impact** — 5/5 PartnerStack 거절. PH 런치 (5/12) + traffic 확보 후 5/26경 reapply
+5. **Buttondown affiliate** — customer review 통과 후 1-click 활성화 가능
+6. **Pricing live 검증** — seed-tools.json 데이터 기반 작성. PH 런치 후 traffic 분석 시점에 일괄 fact-check 권고
+7. **이미지 pipeline** — 현재 미지원. 추가 시 4-6h 별도 작업 (templates/build.py 확장 + 스크린샷 수집)
 
 ## 아키텍처
 ```
@@ -52,10 +62,15 @@ site/                   ← 빌드 산출물 (gh-pages 배포 대상)
 ## 현재 상태
 - [x] 디렉터리 골격
 - [x] Python 빌더 (build.py)
-- [x] Jinja2 템플릿 3종
-- [x] 샘플 페이지 5건 (1 fully fleshed + 4 stubs)
+- [x] Jinja2 템플릿 3종 (base.html.j2 has full visual-rich CSS: quickpick, tool-card, pros-cons, badges)
+- [x] 42 visual-rich 페이지 (5/7 overhaul 완료)
 - [x] GitHub Actions: build/deploy + daily/weekly
 - [x] seed-keywords.json (페르소나 8 × 카테고리 7 = 56 시드)
-- [ ] repo 생성 → Pages 활성화
-- [ ] affiliate 가입 + 링크 등록
-- [ ] Search Console 등록
+- [x] repo + Pages 활성화
+- [x] Search Console 등록 (verification meta in base.html.j2)
+- [x] Amazon Associates US LIVE
+- [x] generate-page.py visual-rich format
+- [ ] PartnerStack/Impact reapply (5/26 post-launch)
+- [ ] Buttondown affiliate 활성화 (customer review pending)
+- [ ] Pricing live 검증 (post-launch)
+- [ ] 이미지 pipeline (필요 시 별도)
