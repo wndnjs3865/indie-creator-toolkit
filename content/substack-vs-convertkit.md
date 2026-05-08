@@ -34,6 +34,10 @@ You're picking between [Substack](https://substack.com) and [Kit (formerly Conve
 
 ## The contenders
 
+<figure class="tool-screenshot">
+  <img src="/images/substack.png" alt="Substack homepage promo — newsletter publishing platform with built-in recommendation network and Notes feed." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b4">S</div>
   <div class="info">
@@ -70,6 +74,10 @@ You're picking between [Substack](https://substack.com) and [Kit (formerly Conve
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/convertkit.jpg" alt="Kit (formerly ConvertKit) homepage banner — email marketing automation built around list ownership and creator-friendly automation." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b2">K</div>

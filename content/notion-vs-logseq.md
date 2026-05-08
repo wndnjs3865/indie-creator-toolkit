@@ -35,6 +35,10 @@ You're picking between [Notion](https://notion.so) and [Logseq](https://logseq.c
 
 ## The contenders
 
+<figure class="tool-screenshot">
+  <img src="/images/notion.png" alt="Notion homepage promo — unified workspace combining docs, databases, wiki, and AI agents in one cloud tool." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b2">N</div>
   <div class="info">
@@ -72,6 +76,10 @@ You're picking between [Notion](https://notion.so) and [Logseq](https://logseq.c
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/logseq.png" alt="Logseq homepage banner — open-source outliner-style note-taking with backlinks, tasks, and PDF annotation." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b3">L</div>

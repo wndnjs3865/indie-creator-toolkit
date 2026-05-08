@@ -35,6 +35,10 @@ You're picking between [Krita](https://krita.org) and [Procreate](https://procre
 
 ## The contenders
 
+<figure class="tool-screenshot">
+  <img src="/images/krita.png" alt="Krita logo — free open-source digital painting app focused on illustration and concept art workflows." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b1">K</div>
   <div class="info">
@@ -72,6 +76,10 @@ You're picking between [Krita](https://krita.org) and [Procreate](https://procre
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/procreate.jpg" alt="Procreate homepage promo — iPad-first illustration app with one-time purchase and Apple Pencil-grade brush engine." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b2">P</div>

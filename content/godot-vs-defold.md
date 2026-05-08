@@ -35,6 +35,10 @@ You're picking between [Godot](https://godotengine.org) and [Defold](https://def
 
 ## The contenders
 
+<figure class="tool-screenshot">
+  <img src="/images/godot.jpg" alt="Godot Engine homepage banner — open-source MIT-licensed 2D and 3D game engine with no royalties." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b4">G</div>
   <div class="info">
@@ -71,6 +75,10 @@ You're picking between [Godot](https://godotengine.org) and [Defold](https://def
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/defold.jpg" alt="Defold homepage banner — King's open-source 2D game engine with tiny binaries and battle-tested mobile/HTML5 export." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b3">D</div>

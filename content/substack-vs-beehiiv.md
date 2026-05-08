@@ -31,6 +31,10 @@ You're picking between [Substack](https://substack.com) and [beehiiv](https://be
 
 ## The contenders
 
+<figure class="tool-screenshot">
+  <img src="/images/substack.png" alt="Substack homepage promo — newsletter publishing platform with built-in recommendation network and Notes feed." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b1">S</div>
   <div class="info">
@@ -63,6 +67,10 @@ You're picking between [Substack](https://substack.com) and [beehiiv](https://be
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/beehiiv.png" alt="beehiiv homepage banner — newsletter platform with native referral program, ad marketplace, and growth-first analytics." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b2">B</div>

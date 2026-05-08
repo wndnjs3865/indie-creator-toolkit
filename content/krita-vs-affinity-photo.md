@@ -35,6 +35,10 @@ You're picking between [Krita](https://krita.org) and [Affinity Photo](https://a
 
 ## The contenders
 
+<figure class="tool-screenshot">
+  <img src="/images/krita.png" alt="Krita logo — free open-source digital painting app focused on illustration and concept art workflows." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b1">K</div>
   <div class="info">

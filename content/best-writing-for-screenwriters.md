@@ -30,6 +30,10 @@ You write alone. You revise alone. The last thing you want is a $299 Final Draft
 
 ## The contenders, ranked
 
+<figure class="tool-screenshot">
+  <img src="/images/scrivener.png" alt="Scrivener app icon — long-form writing software with corkboard outliner, used widely by novelists and screenwriters." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b6">S</div>
   <div class="info">
@@ -65,6 +69,10 @@ You write alone. You revise alone. The last thing you want is a $299 Final Draft
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/obsidian.png" alt="Obsidian homepage banner — local-first markdown notes app with backlinks and a knowledge graph view." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b5">O</div>
@@ -102,6 +110,10 @@ You write alone. You revise alone. The last thing you want is a $299 Final Draft
 
 ---
 
+<figure class="tool-screenshot">
+  <img src="/images/notion.png" alt="Notion homepage promo — unified workspace combining docs, databases, wiki, and AI agents in one cloud tool." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b2">N</div>
   <div class="info">
@@ -137,6 +149,10 @@ You write alone. You revise alone. The last thing you want is a $299 Final Draft
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/logseq.png" alt="Logseq homepage banner — open-source outliner-style note-taking with backlinks, tasks, and PDF annotation." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b3">L</div>

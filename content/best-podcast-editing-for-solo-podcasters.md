@@ -30,6 +30,10 @@ You record alone. You edit alone. The last thing you want is a DAW built for mus
 
 ## The contenders, ranked
 
+<figure class="tool-screenshot">
+  <img src="/images/descript.jpg" alt="Descript homepage banner — text-based audio and video editing with AI transcription, screen recording, and overdub." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b1">D</div>
   <div class="info">
@@ -65,6 +69,10 @@ You record alone. You edit alone. The last thing you want is a DAW built for mus
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/audacity.png" alt="Audacity logo — the open-source cross-platform audio editor that has powered indie podcasts for two decades." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b4">A</div>
@@ -137,6 +145,10 @@ You record alone. You edit alone. The last thing you want is a DAW built for mus
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/reaper.jpg" alt="REAPER logo — pay-what-you-can professional digital audio workstation with deep scripting and customization." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b5">R</div>

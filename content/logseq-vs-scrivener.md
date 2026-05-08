@@ -35,6 +35,10 @@ You're picking between [Logseq](https://logseq.com) and [Scrivener](https://www.
 
 ## The contenders
 
+<figure class="tool-screenshot">
+  <img src="/images/logseq.png" alt="Logseq homepage banner — open-source outliner-style note-taking with backlinks, tasks, and PDF annotation." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b3">L</div>
   <div class="info">
@@ -72,6 +76,10 @@ You're picking between [Logseq](https://logseq.com) and [Scrivener](https://www.
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/scrivener.png" alt="Scrivener app icon — long-form writing software with corkboard outliner, used widely by novelists and screenwriters." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b6">S</div>

@@ -37,6 +37,10 @@ You're picking between [Unity](https://unity.com) and [Defold](https://defold.co
 
 ## The contenders
 
+<figure class="tool-screenshot">
+  <img src="/images/unity.png" alt="Unity homepage banner — commercial 3D engine, mobile pipeline, and the largest game-dev asset store ecosystem." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b2">U</div>
   <div class="info">
@@ -75,6 +79,10 @@ You're picking between [Unity](https://unity.com) and [Defold](https://defold.co
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/defold.jpg" alt="Defold homepage banner — King's open-source 2D game engine with tiny binaries and battle-tested mobile/HTML5 export." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b3">D</div>

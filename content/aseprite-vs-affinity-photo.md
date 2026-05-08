@@ -34,6 +34,10 @@ You're picking between [Aseprite](https://www.aseprite.org) and [Affinity Photo]
 
 ## The contenders
 
+<figure class="tool-screenshot">
+  <img src="/images/aseprite.png" alt="Aseprite banner — pixel-art and animated-sprite editor with one-time purchase and source-available license." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b3">A</div>
   <div class="info">

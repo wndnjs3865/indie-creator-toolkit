@@ -90,6 +90,29 @@ def _price(t, *, free_label="$0", prefix=""):
     return f"{prefix}${t['paid_price_usd']}/mo"
 
 
+_IMG_EXTS = (".png", ".jpg", ".jpeg", ".webp", ".svg")
+IMAGES = ROOT / "images"
+
+
+def _figure_for(t):
+    """Return a <figure> block for tools that have an image, else empty string.
+
+    Stays in sync with the manual insert-figures.py logic so an auto-generated
+    page looks the same as the hand-edited ones."""
+    tool_id = t["id"]
+    for ext in _IMG_EXTS:
+        if (IMAGES / f"{tool_id}{ext}").exists():
+            alt = f"{t['name']} homepage banner — {(t.get('best_for') or [''])[0]}.".strip()
+            return (
+                f'<figure class="tool-screenshot">\n'
+                f'  <img src="/images/{tool_id}{ext}" alt="{alt}" '
+                f'loading="lazy" width="1200" height="630" '
+                f'style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">\n'
+                f'</figure>\n\n'
+            )
+    return ""
+
+
 def emit_best(persona, category, tools, slug):
     title = f"Best {category['label']} for {persona['label']} in 2026"
     picks = tools[:5]
@@ -134,7 +157,7 @@ def emit_best(persona, category, tools, slug):
             else f"{(t.get('best_for') or ['Solid pick for'])[0].capitalize()} — "
                  f"another option in the {category['label']} space."
         )
-        cards.append(f"""<div class="tool-card">
+        cards.append(_figure_for(t) + f"""<div class="tool-card">
   <div class="logo {logo_cls}">{initial}</div>
   <div class="info">
     <div class="info-top"><h3>{t['name']}</h3><span class="badge {cls}">{label}</span></div>
@@ -273,7 +296,7 @@ def emit_vs(a, b, category, slug):
         price = _price(t, free_label="Free forever", prefix="From ")
         pros_li = "\n".join(f"      <li>{x}</li>" for x in t.get("pros", []))
         cons_li = "\n".join(f"      <li>{x}</li>" for x in t.get("cons", []))
-        return f"""<div class="tool-card">
+        return _figure_for(t) + f"""<div class="tool-card">
   <div class="logo {logo_cls}">{initial}</div>
   <div class="info">
     <div class="info-top"><h3>{t['name']}</h3><span class="badge {cls}">{label}</span></div>
@@ -390,7 +413,7 @@ def emit_free_alts(target, alts, slug):
         pros_li = "\n".join(f"      <li>{x}</li>" for x in t.get("pros", []))
         cons_li = "\n".join(f"      <li>{x}</li>" for x in t.get("cons", []))
         intro_blurb = (t.get("best_for") or ["A solid free alternative"])[0].capitalize()
-        cards.append(f"""<div class="tool-card">
+        cards.append(_figure_for(t) + f"""<div class="tool-card">
   <div class="logo {logo_cls}">{initial}</div>
   <div class="info">
     <div class="info-top"><h3>{t['name']}</h3><span class="badge {cls}">{label}</span></div>

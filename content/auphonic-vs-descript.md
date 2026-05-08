@@ -73,6 +73,10 @@ You're picking between [Auphonic](https://auphonic.com) and [Descript](https://d
 
 ---
 
+<figure class="tool-screenshot">
+  <img src="/images/descript.jpg" alt="Descript homepage banner — text-based audio and video editing with AI transcription, screen recording, and overdub." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b1">D</div>
   <div class="info">

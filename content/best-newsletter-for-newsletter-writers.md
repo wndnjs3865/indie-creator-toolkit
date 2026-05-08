@@ -31,6 +31,10 @@ You write alone. You ship alone. The last thing you want is a newsletter platfor
 
 ## The contenders, ranked
 
+<figure class="tool-screenshot">
+  <img src="/images/substack.png" alt="Substack homepage promo — newsletter publishing platform with built-in recommendation network and Notes feed." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b4">S</div>
   <div class="info">
@@ -67,6 +71,10 @@ You write alone. You ship alone. The last thing you want is a newsletter platfor
 
 ---
 
+<figure class="tool-screenshot">
+  <img src="/images/convertkit.jpg" alt="Kit (formerly ConvertKit) homepage banner — email marketing automation built around list ownership and creator-friendly automation." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b2">K</div>
   <div class="info">
@@ -102,6 +110,10 @@ You write alone. You ship alone. The last thing you want is a newsletter platfor
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/beehiiv.png" alt="beehiiv homepage banner — newsletter platform with native referral program, ad marketplace, and growth-first analytics." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b3">b</div>
@@ -174,6 +186,10 @@ You write alone. You ship alone. The last thing you want is a newsletter platfor
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/ghost.png" alt="Ghost homepage banner — open-source publishing platform with newsletter and blog on a single domain you own." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b5">G</div>

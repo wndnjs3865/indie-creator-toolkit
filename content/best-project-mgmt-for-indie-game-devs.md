@@ -29,6 +29,10 @@ You design alone. You code alone. You commit alone. The last thing you want is a
 
 ## The contenders, ranked
 
+<figure class="tool-screenshot">
+  <img src="/images/linear.jpg" alt="Linear homepage banner — fast issue tracker built for software teams with keyboard-first workflow." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b1">L</div>
   <div class="info">
@@ -100,6 +104,10 @@ You design alone. You code alone. You commit alone. The last thing you want is a
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/notion.png" alt="Notion homepage promo — unified workspace combining docs, databases, wiki, and AI agents in one cloud tool." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b2">N</div>
