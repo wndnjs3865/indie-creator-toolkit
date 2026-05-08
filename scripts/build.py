@@ -144,6 +144,24 @@ def rewrite_affiliate_links(html: str, affiliates: dict) -> str:
     return re.sub(r'<a([^>]*?)href="([^"]+)"([^>]*?)>', fix, html)
 
 
+def rewrite_image_src(html: str, site_base: str) -> str:
+    """Prefix root-relative image src with the deployment subpath.
+
+    GitHub Pages serves project sites at a subpath (/indie-creator-toolkit/),
+    so <img src="/images/x.png"> would be requested at the apex
+    (wndnjs3865.github.io/images/x.png) and 404. Detect the subpath from
+    SITE_BASE and prefix it. No-op when deployed at the apex (path == "")."""
+    from urllib.parse import urlparse
+    path = urlparse(site_base).path.rstrip("/")
+    if not path:
+        return html
+    return re.sub(
+        r'(<img[^>]*?\s)src="(/[^"]+)"',
+        lambda m: f'{m.group(1)}src="{path}{m.group(2)}"',
+        html,
+    )
+
+
 def pick_related(current_meta, all_meta, max_n=4):
     """Find pages with same persona OR same category, excluding self."""
     out = []
@@ -192,6 +210,7 @@ def build():
         related = pick_related(p, all_pages)
         body_html = markdown.markdown(p["body_md"], extensions=["tables", "fenced_code", "toc", "md_in_html", "attr_list"])
         body_html = rewrite_affiliate_links(body_html, affiliates)
+        body_html = rewrite_image_src(body_html, SITE_BASE)
         canonical = f"{SITE_BASE}/{p['slug']}/"
         word_count = len(re.findall(r"\w+", p["body_md"]))
 
