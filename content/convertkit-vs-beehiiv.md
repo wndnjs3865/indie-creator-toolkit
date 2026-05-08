@@ -35,6 +35,10 @@ You're picking between [Kit (formerly ConvertKit)](https://kit.com) and [beehiiv
 
 ## The contenders
 
+<figure class="tool-screenshot">
+  <img src="/images/convertkit.jpg" alt="Kit (formerly ConvertKit) homepage banner — email marketing automation built around list ownership and creator-friendly automation." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b2">K</div>
   <div class="info">
@@ -72,6 +76,10 @@ You're picking between [Kit (formerly ConvertKit)](https://kit.com) and [beehiiv
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/beehiiv.png" alt="beehiiv homepage banner — newsletter platform with native referral program, ad marketplace, and growth-first analytics." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b3">b</div>

@@ -17,6 +17,7 @@ Writes:
 import json
 import os
 import re
+import shutil
 import sys
 import datetime as dt
 from pathlib import Path
@@ -243,6 +244,14 @@ def build():
     (OUT / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {SITE_BASE}/sitemap.xml\n",
         encoding="utf-8")
+
+    # Static images: copy ROOT/images → site/images so /images/foo.png resolves.
+    images_src = ROOT / "images"
+    if images_src.exists():
+        images_dest = OUT / "images"
+        if images_dest.exists():
+            shutil.rmtree(images_dest)
+        shutil.copytree(images_src, images_dest)
 
     print(f"[build] {len(all_pages)} pages → {OUT}")
 

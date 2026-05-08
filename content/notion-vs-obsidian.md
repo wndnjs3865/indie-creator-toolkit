@@ -36,6 +36,10 @@ You're picking between [Notion](https://notion.so) and [Obsidian](https://obsidi
 
 ## The contenders
 
+<figure class="tool-screenshot">
+  <img src="/images/notion.png" alt="Notion homepage promo — unified workspace combining docs, databases, wiki, and AI agents in one cloud tool." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b2">N</div>
   <div class="info">
@@ -74,6 +78,10 @@ You're picking between [Notion](https://notion.so) and [Obsidian](https://obsidi
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/obsidian.png" alt="Obsidian homepage banner — local-first markdown notes app with backlinks and a knowledge graph view." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b5">O</div>

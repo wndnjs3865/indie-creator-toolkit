@@ -36,6 +36,10 @@ You're picking between [Godot](https://godotengine.org) and [Unity](https://unit
 
 ## The contenders
 
+<figure class="tool-screenshot">
+  <img src="/images/godot.jpg" alt="Godot Engine homepage banner — open-source MIT-licensed 2D and 3D game engine with no royalties." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b4">G</div>
   <div class="info">
@@ -73,6 +77,10 @@ You're picking between [Godot](https://godotengine.org) and [Unity](https://unit
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/unity.png" alt="Unity homepage banner — commercial 3D engine, mobile pipeline, and the largest game-dev asset store ecosystem." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b2">U</div>
