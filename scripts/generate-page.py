@@ -78,6 +78,18 @@ def _yes_no(b):
     return '<span class="yes">✓</span>' if b else '<span class="no">✗</span>'
 
 
+def _price(t, *, free_label="$0", prefix=""):
+    """Render a tool's paid price with the correct unit (month/year/once)."""
+    if t["paid_price_usd"] == 0:
+        return free_label
+    unit = t.get("pricing_unit", "month")
+    if unit == "year":
+        return f"{prefix}${t['paid_price_usd']}/yr"
+    if unit == "once":
+        return f"${t['paid_price_usd']} once"
+    return f"{prefix}${t['paid_price_usd']}/mo"
+
+
 def emit_best(persona, category, tools, slug):
     title = f"Best {category['label']} for {persona['label']} in 2026"
     picks = tools[:5]
@@ -94,7 +106,7 @@ def emit_best(persona, category, tools, slug):
             "|---|---|---|---|---|"]
     for i, t in enumerate(picks):
         cls, label = _badge_for_tool(t, i)
-        price = "$0" if t["paid_price_usd"] == 0 else f"${t['paid_price_usd']}/mo"
+        price = _price(t)
         free = _yes_no(t["starting_price_usd"] == 0)
         oss = _yes_no(t.get("open_source"))
         best_for = (t.get("best_for") or ["—"])[0]
@@ -110,7 +122,7 @@ def emit_best(persona, category, tools, slug):
         cls, label = _badge_for_tool(t, i)
         logo_cls = _LOGO_CLASSES[i % len(_LOGO_CLASSES)]
         initial = t["name"][0].upper()
-        price = "Free forever" if t["paid_price_usd"] == 0 else f"From ${t['paid_price_usd']}/mo"
+        price = _price(t, free_label="Free forever", prefix="From ")
         free_pill = f"🎁 {t['free_tier']}" if t["starting_price_usd"] == 0 else "💰 paid only"
         platform_pill = f"🌐 {t.get('platform', '—').split(',')[0]}"
         pros_li = "\n".join(f"      <li>{x}</li>" for x in t.get("pros", []))
@@ -232,7 +244,7 @@ def emit_vs(a, b, category, slug):
     def yn(b_val):
         return _yes_no(b_val)
     def price_str(t):
-        return "Free" if t["paid_price_usd"] == 0 else f"${t['paid_price_usd']}/mo"
+        return _price(t, free_label="Free")
 
     a_cls, a_label = _badge_for_tool(a, 0)
     b_cls, b_label = _badge_for_tool(b, 1)
@@ -258,7 +270,7 @@ def emit_vs(a, b, category, slug):
     def card(t, idx, cls, label):
         logo_cls = _LOGO_CLASSES[idx % len(_LOGO_CLASSES)]
         initial = t["name"][0].upper()
-        price = "Free forever" if t["paid_price_usd"] == 0 else f"From ${t['paid_price_usd']}/mo"
+        price = _price(t, free_label="Free forever", prefix="From ")
         pros_li = "\n".join(f"      <li>{x}</li>" for x in t.get("pros", []))
         cons_li = "\n".join(f"      <li>{x}</li>" for x in t.get("cons", []))
         return f"""<div class="tool-card">
@@ -346,7 +358,7 @@ def find_free_alts_combo(tools, exists):
 def emit_free_alts(target, alts, slug):
     title = f"Free alternatives to {target['name']} in 2026"
     description = (
-        f"{target['name']}'s ${target['paid_price_usd']}/mo not in the budget? "
+        f"{target['name']}'s {_price(target)} not in the budget? "
         f"Here are the genuinely-free alternatives that work in 2026."
     )
     top_alt = alts[0]
@@ -420,7 +432,7 @@ def emit_free_alts(target, alts, slug):
         "---\n\n"
     )
     body = (
-        f"[{target['name']}]({target['homepage']}) costs ${target['paid_price_usd']}/mo. "
+        f"[{target['name']}]({target['homepage']}) costs {_price(target)}. "
         f"If that's not in the budget yet — or you specifically want open source — here are "
         f"the genuinely-free alternatives that work in 2026.\n\n"
         + quickpick + "\n\n"

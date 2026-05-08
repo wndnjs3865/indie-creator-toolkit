@@ -6,7 +6,7 @@ persona: solo-podcasters
 persona_label: "Solo podcasters"
 category: hosting
 pattern: list
-updated: 2026-05-04
+updated: 2026-05-08
 ---
 
 You record alone. You edit alone. The last thing you want is to wrestle with a podcast host built for media networks. Below are the six hosts I'd actually recommend to a solo podcaster in 2026 — picked for friendly UX, fair pricing, and the ability to *grow with you* without forcing an enterprise contract.
