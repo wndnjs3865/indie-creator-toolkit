@@ -77,6 +77,10 @@ You're picking between [Procreate](https://procreate.com) and [Affinity Photo](h
 
 ---
 
+<figure class="tool-screenshot">
+  <img src="/images/affinity-photo.png" alt="Affinity Photo homepage banner — professional photo editing software from Canva with one-time purchase and full RAW workflow." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b5">A</div>
   <div class="info">

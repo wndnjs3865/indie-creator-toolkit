@@ -77,6 +77,10 @@ You're picking between [Godot](https://godotengine.org) and [GameMaker](https://
 
 ---
 
+<figure class="tool-screenshot">
+  <img src="/images/gamemaker.png" alt="GameMaker homepage banner — the friendly indie 2D game engine that shipped Undertale, Hyper Light Drifter, and Hotline Miami." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b1">G</div>
   <div class="info">

@@ -30,6 +30,10 @@ updated: 2026-05-07
 
 ## The contenders
 
+<figure class="tool-screenshot">
+  <img src="/images/aseprite.png" alt="Aseprite homepage banner — pixel-art and animated-sprite editor with one-time purchase and source-available license." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b1">A</div>
   <div class="info">
@@ -65,6 +69,10 @@ updated: 2026-05-07
 
 ---
 
+<figure class="tool-screenshot">
+  <img src="/images/libresprite.png" alt="LibreSprite homepage banner — free open-source pixel-art and animated-sprite editor forked from the pre-commercial Aseprite." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b3">L</div>
   <div class="info">
@@ -99,6 +107,10 @@ updated: 2026-05-07
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/pixelorama.png" alt="Pixelorama homepage banner — free open-source pixel-art multitool from Orama Interactive with Godot-powered editor." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b4">P</div>

@@ -110,6 +110,10 @@ You record alone. You edit alone. The last thing you want is a DAW built for mus
 
 ---
 
+<figure class="tool-screenshot">
+  <img src="/images/auphonic.png" alt="Auphonic homepage banner — AI audio post-production tool with leveling, noise reduction, and loudness compliance for podcasters." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b3">A</div>
   <div class="info">
@@ -147,7 +151,7 @@ You record alone. You edit alone. The last thing you want is a DAW built for mus
 ---
 
 <figure class="tool-screenshot">
-  <img src="/images/reaper.jpg" alt="REAPER logo — pay-what-you-can professional digital audio workstation with deep scripting and customization." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+  <img src="/images/reaper.png" alt="REAPER logo — pay-what-you-can professional digital audio workstation with deep scripting and customization." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
 </figure>
 
 <div class="tool-card">

@@ -70,6 +70,10 @@ updated: 2026-05-07
 
 ---
 
+<figure class="tool-screenshot">
+  <img src="/images/manuskript.png" alt="Manuskript repository banner — open-source writing tool by Olivier Kes with outliner, distraction-free mode, and snowflake method support." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
+
 <div class="tool-card">
   <div class="logo b3">M</div>
   <div class="info">
@@ -107,6 +111,10 @@ updated: 2026-05-07
 </div>
 
 ---
+
+<figure class="tool-screenshot">
+  <img src="/images/libreoffice.png" alt="LibreOffice homepage banner — free open-source office suite from The Document Foundation with Writer, Calc, Impress, and Draw." loading="lazy" width="1200" height="630" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem 0;">
+</figure>
 
 <div class="tool-card">
   <div class="logo b6">L</div>
